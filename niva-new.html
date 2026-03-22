@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lada Niva (travel): характеристики, слабые места, отзывы | Городской внедорожник</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --lada-red: #c00;
+            --lada-dark: #1a1a1a;
+            --lada-light: #f8f9fa;
+            --niva-purple: #6f42c1;
+        }
+        
+        .navbar-brand { font-weight: bold; color: var(--lada-red) !important; }
+        .nav-link.active { color: var(--lada-red) !important; font-weight: 600; }
+        footer { background-color: var(--lada-dark); }
+        
+        .model-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://avatars.mds.yandex.net/get-autoru-vos/216201/2a0000017b2b62ef6cf4e12aed92372d3baa/orig');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .problem-card {
+            border-left: 4px solid;
+            transition: all 0.3s;
+        }
+        
+        .problem-card.critical { border-left-color: #dc3545; }
+        .problem-card.medium { border-left-color: #ffc107; }
+        .problem-card.low { border-left-color: #28a745; }
+        
+        .problem-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .spec-icon {
+            color: var(--niva-purple);
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        .rating-stars {
+            color: #ffc107;
+        }
+        
+        .badge-severity-low { background-color: #28a745; }
+        .badge-severity-medium { background-color: #ffc107; color: #000; }
+        .badge-severity-high { background-color: #dc3545; }
+        
+        .suv-badge {
+            background: var(--niva-purple);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 2px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .alert-niva-new {
+            border-left: 4px solid var(--niva-purple);
+        }
+        
+        .version-card {
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .drive-mode {
+            background: linear-gradient(45deg, #6f42c1, #a78bfa);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .comparison-chart {
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        
+        .chart-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #6f42c1, #a78bfa);
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+        
+        .generation-timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 30px 0;
+        }
+        
+        .generation-timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 20px;
+            height: 3px;
+            background: #6f42c1;
+            z-index: 1;
+        }
+        
+        .timeline-point {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 120px;
+        }
+        
+        .timeline-dot {
+            width: 15px;
+            height: 15px;
+            background: #6f42c1;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #6f42c1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-car-front-fill"></i> LADA Обзор
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="modelsDropdown" role="button" data-bs-toggle="dropdown">
+                            Модели
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="granta.html">Lada Granta</a></li>
+                            <li><a class="dropdown-item" href="vesta.html">Lada Vesta</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="niva.html">Lada Niva (4x4)</a></li>
+                            <li><a class="dropdown-item active" href="niva-new.html">Lada Niva (новая)</a></li>
+                            <li><a class="dropdown-item" href="largus.html">Lada Largus</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Шапка модели -->
+    <header class="model-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent p-0">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Главная</a></li>
+                            <li class="breadcrumb-item text-white" aria-current="page">Lada Niva (новая)</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold">Lada Niva (новая)</h1>
+                    <p class="lead">Современный городской внедорожник с комфортом и полным приводом. Преемник легенды с новыми технологиями.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-3">
+                        <span class="badge bg-primary fs-6">SUV B-класс</span>
+                        <span class="badge bg-secondary fs-6">От 1 400 000 ₽</span>
+                        <span class="badge bg-success fs-6">Полный привод</span>
+                        <span class="badge bg-info fs-6">Renault платформа</span>
+                    </div>
+                    <div class="rating-stars fs-4">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <i class="bi bi-star"></i>
+                        <span class="ms-2">3.5/5 на основе 987 отзывов</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="https://avatars.mds.yandex.net/get-autoru-vos/216201/2a0000017b2b62ef6cf4e12aed92372d3baa/orig" 
+                         class="img-fluid rounded shadow" alt="Lada Niva новая" style="max-height: 250px;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Навигация по странице -->
+            <nav class="mb-5">
+                <div class="nav nav-tabs" id="modelTab" role="tablist">
+                    <button class="nav-link active" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs">
+                        <i class="bi bi-list-check"></i> Характеристики
+                    </button>
+                    <button class="nav-link" id="problems-tab" data-bs-toggle="tab" data-bs-target="#problems">
+                        <i class="bi bi-exclamation-triangle"></i> Слабые места
+                    </button>
+                    <button class="nav-link" id="offroad-tab" data-bs-toggle="tab" data-bs-target="#offroad">
+                        <i class="bi bi-geo-alt"></i> Внедорожный потенциал
+                    </button>
+                    <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review">
+                        <i class="bi bi-search"></i> Что проверять
+                    </button>
+                    <button class="nav-link" id="opinions-tab" data-bs-toggle="tab" data-bs-target="#opinions">
+                        <i class="bi bi-chat-left-text"></i> Отзывы (56)
+                    </button>
+                </div>
+            </nav>
+
+            <div class="tab-content" id="modelTabContent">
+                <!-- Вкладка Характеристики -->
+                <div class="tab-pane fade show active" id="specs">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h3 class="mb-4">Современный SUV на платформе Renault-Nissan</h3>
+                            <p class="lead">Lada Niva (новая) - это не преемник классической Нивы, а совершенно другой автомобиль на платформе Renault-Nissan B0 (Duster, Captur). Представлена в 2020 году.</p>
+                            
+                            <!-- История появления -->
+                            <h4 class="mt-4">История появления</h4>
+                            <div class="generation-timeline">
+                                <div class="timeline-point">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-text">
+                                        <strong>2018</strong>
+                                        <p>Презентация концепта</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-point">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-text">
+                                        <strong>2020</strong>
+                                        <p>Старт продаж</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-point">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-text">
+                                        <strong>2022</strong>
+                                        <p>Рестайлинг</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-point">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-text">
+                                        <strong>2023</strong>
+                                        <p>Появление Niva Travel</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-speedometer2 spec-icon"></i>Динамика
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Разгон 0-100 км/ч:</strong> 14.5 сек (АМТ)</p>
+                                            <p><strong>Макс. скорость:</strong> 156 км/ч</p>
+                                            <p><strong>Углы проходимости:</strong> 20°/33°</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-fuel-pump spec-icon"></i>Расход топлива
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Город:</strong> 11.5 л/100км</p>
+                                            <p><strong>Трасса:</strong> 8.5 л/100км</p>
+                                            <p><strong>Смешанный:</strong> 10.2 л/100км</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-rulers spec-icon"></i>Габариты
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Длина/Ширина:</strong> 4249/1784 мм</p>
+                                            <p><strong>Дорожный просвет:</strong> 205 мм</p>
+                                            <p><strong>Багажник:</strong> 320/650 л</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>Технические особенности</h4>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-primary text-white">
+                                            <h6 class="mb-0">Платформа и привод</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><strong>Платформа:</strong> Renault-Nissan B0</li>
+                                                <li><strong>Привод:</strong> Подключаемый полный (4WD)</li>
+                                                <li><strong>Блокировки:</strong> Электронная имитация</li>
+                                                <li><strong>КПП:</strong> 5-ст. механика, робот АМТ</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-primary text-white">
+                                            <h6 class="mb-0">Ходовая часть</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><strong>Передняя подвеска:</strong> Независимая, McPherson</li>
+                                                <li><strong>Задняя подвеска:</strong> Полузависимая, торсионная балка</li>
+                                                <li><strong>Тормоза:</strong> Дисковые передние, барабанные задние</li>
+                                                <li><strong>Рулевое:</strong> Электроусилитель</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>Режимы привода</h4>
+                            <div class="row mb-4">
+                                <div class="col-md-3">
+                                    <div class="drive-mode">
+                                        <h5>2WD</h5>
+                                        <p>Передний привод</p>
+                                        <small>Для города и трассы</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="drive-mode">
+                                        <h5>AUTO</h5>
+                                        <p>Автоматический</p>
+                                        <small>Автоматическое подключение 4WD</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="drive-mode">
+                                        <h5>4WD Lock</h5>
+                                        <p>Полный привод</p>
+                                        <small>Блокировка муфты до 60 км/ч</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="drive-mode">
+                                        <h5>4WD Low</h5>
+                                        <p>Пониженная</p>
+                                        <small>Только для версии Travel</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>Основные комплектации</h4>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Base</h5>
+                                            <p>Кондиционер, 2 подушки безопасности, ABS, центральный замок.</p>
+                                            <p class="fw-bold text-danger">От 1 400 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Comfort</h5>
+                                            <p>Климат-контроль, мультимедиа с экраном, легкосплавные диски.</p>
+                                            <p class="fw-bold text-danger">От 1 550 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Travel</h5>
+                                            <p>Понижающая передача, защита картера, увеличенный клиренс.</p>
+                                            <p class="fw-bold text-danger">От 1 700 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card sticky-top" style="top: 20px;">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Краткий вердикт</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6>👍 Основные достоинства:</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Современный комфортный салон</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Надежная платформа Renault</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Полный привод при необходимости</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Хорошая шумоизоляция</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Современные системы безопасности</li>
+                                    </ul>
+                                    
+                                    <h6 class="mt-3">👎 Критические недостатки:</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Робот АМТ (проблемный)</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Слабая внедорожная проходимость</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Высокий расход топлива</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Малый дорожный просвет</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Высокая цена для Lada</li>
+                                    </ul>
+                                    
+                                    <div class="alert alert-niva-new mt-3">
+                                        <i class="bi bi-lightbulb"></i>
+                                        <strong>Рекомендация:</strong> Выбирайте версию Travel с механикой для лучшей проходимости.
+                                    </div>
+                                    
+                                    <div class="alert alert-warning mt-3">
+                                        <i class="bi bi-exclamation-triangle"></i>
+                                        <strong>Внимание:</strong> Это не замена классической Нивы! Это городской кроссовер с полным приводом.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mt-4">
+                                <div class="card-header bg-info text-white">
+                                    <h5 class="mb-0">Сравнение с классической Нивой</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>Новая Нива:</strong> Комфорт, город, платформа Renault</p>
+                                    <p><strong>Классика:</strong> Проходимость, простота, рамная конструкция</p>
+                                    <p><strong>Общее:</strong> Только название и полный привод</p>
+                                    <div class="alert alert-info mt-2">
+                                        <small>Это разные автомобили для разных задач!</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Слабые места -->
+                <div class="tab-pane fade" id="problems">
+                    <h3 class="mb-4">Слабые места новой Lada Niva: проблемы и недостатки</h3>
+                    
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle"></i> Многие проблемы связаны с использованием платформы Renault и попыткой сделать бюджетный внедорожник.
+                    </div>
+
+                    <div class="row">
+                        <!-- Проблема 1 - Критичная -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card critical h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Робот АМТ (Jatco)</h5>
+                                        <span class="badge badge-severity-high">Критично</span>
+                                    </div>
+                                    <p class="card-text">Тот же проблемный робот, что и на Granta/Largus. На тяжелом внедорожнике проблемы усугубляются.</p>
+                                    <p><strong>Симптомы:</strong> рывки при переключении, перегрев в пробках, аварийный режим.</p>
+                                    <p><strong>Причина:</strong> робот не рассчитан на вес 1400+ кг и внедорожную эксплуатацию.</p>
+                                    <p><strong>Решение:</strong> выбирать механическую КПП или быть готовым к частым ремонтам.</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Встречаемость: ~35% отзывов, пробег до проблемы: 20-40 тыс. км</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 2 - Средняя -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card medium h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Двигатель 1.8 л</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">Двигатель от Priora/Vesta на тяжелом кузове (1450 кг). Не хватает мощности и крутящего момента.</p>
+                                    <p><strong>Симптомы:</strong> слабая динамика, высокий расход, перегрев при нагрузках.</p>
+                                    <p><strong>Причина:</strong> 122 л.с. недостаточно для внедорожника весом 1.5 тонны.</p>
+                                    <p><strong>Решение:</strong> аккуратная эксплуатация, установка доп. охлаждения.</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Разгон 0-100: 14.5 сек - очень медленно для SUV</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 3 - Средняя -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card medium h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Муфта полного привода</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">Электромагнитная муфта подключения заднего моста. Чувствительна к перегреву и нагрузкам.</p>
+                                    <p><strong>Симптомы:</strong> не подключается задний мост, ошибки 4WD, перегрев муфты.</p>
+                                    <p><strong>Причина:</strong> рассчитана на легкое бездорожье, а не серьезную эксплуатацию.</p>
+                                    <p><strong>Решение:</strong> не буксовать, давать остывать, своевременное обслуживание.</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Версия Travel имеет более надежную конструкцию</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 4 - Низкая -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card low h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Качество сборки</h5>
+                                        <span class="badge badge-severity-low">Низко</span>
+                                    </div>
+                                    <p class="card-text">Неравномерные зазоры кузовных панелей, скрипы пластика, плохая подгонка элементов.</p>
+                                    <p><strong>Симптомы:</strong> скрипы на неровностях, дребезжание, ощущение дешевизны.</p>
+                                    <p><strong>Причина:</strong> сборка на мощностях AVTOVAZ, а не Renault.</p>
+                                    <p><strong>Решение:</strong> установка дополнительных уплотнителей, регулировка.</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Типичная проблема для всех Lada</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 5 - Низкая -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card low h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Электрические проблемы</h5>
+                                        <span class="badge badge-severity-low">Низко</span>
+                                    </div>
+                                    <p class="card-text">Глюки мультимедиа, проблемы с датчиками, отказы электронных систем.</p>
+                                    <p><strong>Симптомы:</strong> зависание экрана, ошибки на приборке, неработающие датчики.</p>
+                                    <p><strong>Причина:</strong> адаптация Renault систем под российские условия.</p>
+                                    <p><strong>Решение:</strong> обновление прошивки, замена датчиков.</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Меньше проблем, чем у Vesta, но присутствуют</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 6 - Средняя -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card medium h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Подвеска и клиренс</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">205 мм дорожного просвета - мало для внедорожника. Мягкая подвеска для бездорожья.</p>
+                                    <p><strong>Симптомы:</strong> задевание днищем на неровностях, крены в поворотах.</p>
+                                    <p><strong>Причина:</strong> платформа от кроссовера, а не рамного внедорожника.</p>
+                                    <p><strong>Решение:</strong> версия Travel (220 мм), установка лифта.</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Для сравнения: УАЗ Патриот - 210 мм, Duster - 210 мм</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success mt-4">
+                        <h5><i class="bi bi-check-circle"></i> Что работает надежно</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><strong>Платформа Renault:</strong> проверенная временем</li>
+                                    <li><strong>Механическая КПП:</strong> надежная, от Duster</li>
+                                    <li><strong>Тормозная система:</strong> эффективные тормоза</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><strong>Кузов:</strong> хорошая антикоррозийная обработка</li>
+                                    <li><strong>Салон:</strong> качественные материалы (для Lada)</li>
+                                    <li><strong>Электроусилитель:</strong> легкое управление</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-header bg-warning">
+                            <h5 class="mb-0">Сравнение версий: обычная vs Travel</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Параметр</th>
+                                            <th>Обычная Niva</th>
+                                            <th>Niva Travel</th>
+                                            <th>Преимущество Travel</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Клиренс</strong></td>
+                                            <td>205 мм</td>
+                                            <td>220 мм</td>
+                                            <td>+15 мм</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Защита картера</strong></td>
+                                            <td>Нет</td>
+                                            <td>Есть</td>
+                                            <td>Защита от ударов</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Понижающая передача</strong></td>
+                                            <td>Нет</td>
+                                            <td>Есть</td>
+                                            <td>Лучшая проходимость</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Муфта 4WD</strong></td>
+                                            <td>Электромагнитная</td>
+                                            <td>Усиленная</td>
+                                            <td>Надежнее</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Цена</strong></td>
+                                            <td>От 1.4 млн ₽</td>
+                                            <td>От 1.7 млн ₽</td>
+                                            <td>Дороже на 300 тыс.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Внедорожный потенциал -->
+                <div class="tab-pane fade" id="offroad">
+                    <h3 class="mb-4">Внедорожные возможности новой Lada Niva</h3>
+                    
+                    <div class="alert alert-warning">
+                        <h5><i class="bi bi-exclamation-triangle"></i> Важно понимать: это не рамный внедорожник!</h5>
+                        <p>Новая Niva - это кроссовер с полным приводом. Она создана для легкого бездорожья, а не для экстремальной эксплуатации.</p>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Возможности для бездорожья</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><strong>Грязь и снег:</strong> хорошая проходимость благодаря полному приводу</li>
+                                        <li><strong>Песок:</strong> осторожно - может зарываться из-за веса</li>
+                                        <li><strong>Брод:</strong> 450 мм (официально) - не переоценивайте</li>
+                                        <li><strong>Камни:</strong> осторожно - низкий клиренс, нет защиты</li>
+                                        <li><strong>Крутые подъемы:</strong> слабый двигатель, может не хватить мощности</li>
+                                    </ul>
+                                    <div class="alert alert-info mt-3">
+                                        <i class="bi bi-info-circle"></i> Идеально: лесные дороги, полевая колея, снежная целина до 30 см.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Ограничения и опасности</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><strong>Болото:</strong> быстро увязнет - большой вес, слабый двигатель</li>
+                                        <li><strong>Крупные камни:</strong> можно повредить днище - нет защиты</li>
+                                        <li><strong>Глубокий снег:</strong> более 40 см - проблемы</li>
+                                        <li><strong>Крутая грязь:</strong> может перегреться муфта или АМТ</li>
+                                        <li><strong>Серьезное бездорожье:</strong> не предназначена - лучше классическая Нива</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Рекомендуемый тюнинг для бездорожья</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Что улучшить</th>
+                                                <th>Эффект</th>
+                                                <th>Стоимость</th>
+                                                <th>Приоритет</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Защита картера</td>
+                                                <td>Защита от ударов</td>
+                                                <td>8-15 тыс. ₽</td>
+                                                <td><span class="badge bg-danger">Высокий</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Лифт подвески 30-40 мм</td>
+                                                <td>Увеличение клиренса</td>
+                                                <td>20-40 тыс. ₽</td>
+                                                <td><span class="badge bg-warning">Средний</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Грязевые шины</td>
+                                                <td>Улучшение сцепления</td>
+                                                <td>25-50 тыс. ₽</td>
+                                                <td><span class="badge bg-warning">Средний</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Лебедка</td>
+                                                <td>Самовыдергивание</td>
+                                                <td>30-60 тыс. ₽</td>
+                                                <td><span class="badge bg-success">Низкий</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Дополнительное охлаждение</td>
+                                                <td>Защита от перегрева</td>
+                                                <td>15-25 тыс. ₽</td>
+                                                <td><span class="badge bg-danger">Высокий</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Советы по внедорожной эксплуатации</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li>Всегда включайте 4WD до въезда на сложный участок</li>
+                                        <li>При перегреве муфты - остановитесь, дайте остыть</li>
+                                        <li>На АМТ - используйте ручной режим, фиксируйте передачи</li>
+                                        <li>Не буксовать на месте - убивает муфту и АМТ</li>
+                                        <li>Регулярно проверяйте защиту и днище</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="mb-3">Сравнение внедорожного потенциала</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Модель</th>
+                                    <th>Клиренс</th>
+                                    <th>Привод</th>
+                                    <th>Блокировки</th>
+                                    <th>Вес</th>
+                                    <th>Проходимость</th>
+                                    <th>Цена</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-primary">
+                                    <td><strong>Lada Niva (новая)</strong></td>
+                                    <td>205-220 мм</td>
+                                    <td>Подключаемый 4WD</td>
+                                    <td>Электронная имитация</td>
+                                    <td>1450 кг</td>
+                                    <td>Средняя</td>
+                                    <td>1.4-1.7 млн ₽</td>
+                                </tr>
+                                <tr>
+                                    <td>Lada Niva (классика)</td>
+                                    <td>205 мм</td>
+                                    <td>Постоянный 4x4</td>
+                                    <td>Межосевая</td>
+                                    <td>1210 кг</td>
+                                    <td>Высокая</td>
+                                    <td>0.8-1.1 млн ₽</td>
+                                </tr>
+                                <tr>
+                                    <td>Renault Duster</td>
+                                    <td>210 мм</td>
+                                    <td>Подключаемый 4WD</td>
+                                    <td>Электронная имитация</td>
+                                    <td>1380 кг</td>
+                                    <td>Средняя</td>
+                                    <td>2.0-2.5 млн ₽</td>
+                                </tr>
+                                <tr>
+                                    <td>УАЗ Патриот</td>
+                                    <td>210 мм</td>
+                                    <td>Подключаемый 4x4</td>
+                                    <td>Нет</td>
+                                    <td>1850 кг</td>
+                                    <td>Высокая</td>
+                                    <td>1.2-1.8 млн ₽</td>
+                                </tr>
+                                <tr>
+                                    <td>Suzuki Jimny</td>
+                                    <td>210 мм</td>
+                                    <td>Подключаемый 4x4</td>
+                                    <td>Понижающая</td>
+                                    <td>1090 кг</td>
+                                    <td>Очень высокая</td>
+                                    <td>2.5-3.0 млн ₽</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Вердикт по проходимости</h5>
+                                    <div class="comparison-chart">
+                                        <div class="chart-fill" style="width: 60%"></div>
+                                    </div>
+                                    <p><strong>Город/трасса:</strong> 85% (хорошо)</p>
+                                    
+                                    <div class="comparison-chart">
+                                        <div class="chart-fill" style="width: 65%"></div>
+                                    </div>
+                                    <p><strong>Гравий/грунтовка:</strong> 70% (хорошо)</p>
+                                    
+                                    <div class="comparison-chart">
+                                        <div class="chart-fill" style="width: 50%"></div>
+                                    </div>
+                                    <p><strong>Снег/грязь:</strong> 60% (средне)</p>
+                                    
+                                    <div class="comparison-chart">
+                                        <div class="chart-fill" style="width: 30%"></div>
+                                    </div>
+                                    <p><strong>Серьезное бездорожье:</strong> 35% (слабо)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Кому подходит новая Niva</h5>
+                                    <ul>
+                                        <li><strong>Городские жители:</strong> которые иногда выезжают на природу</li>
+                                        <li><strong>Семейные путешественники:</strong> нужен комфорт и возможность съехать с асфальта</li>
+                                        <li><strong>Дачники:</strong> грунтовые дороги до участка</li>
+                                        <li><strong>Охотники/рыболовы:</strong> легкое бездорожье, не экстремальные условия</li>
+                                        <li><strong>Те, кто хочет "внедорожный" вид:</strong> но не готов к жертвам в комфорте</li>
+                                    </ul>
+                                    <div class="alert alert-warning mt-3">
+                                        <i class="bi bi-exclamation-triangle"></i> Не выбирайте новую Niva, если вам нужен настоящий внедорожник!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Что проверять -->
+                <div class="tab-pane fade" id="review">
+                    <h3 class="mb-4">Чек-лист при покупке новой Lada Niva</h3>
+                    
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle"></i> Особое внимание при проверке - работа полного привода и состояние трансмиссии.
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-gear-fill"></i> Проверка трансмиссии и привода</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li><strong>КПП:</strong> для АМТ - проверьте переключения в пробке</li>
+                                        <li><strong>Привод:</strong> проверьте все режимы (2WD, AUTO, 4WD Lock)</li>
+                                        <li><strong>Муфта:</strong> при включении 4WD должен быть щелчок</li>
+                                        <li><strong>Тест на асфальте:</strong> крутые повороты в 4WD - не должно быть заноса</li>
+                                        <li><strong>Прогрев:</strong> после 20-30 км проверьте температуру муфты</li>
+                                    </ol>
+                                    <div class="alert alert-danger mt-3">
+                                        <i class="bi bi-exclamation-octagon"></i> Если 4WD не включается или выключается - дорогой ремонт!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-speedometer"></i> Проверка двигателя</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Заведите холодный двигатель - проверьте цвет выхлопа</li>
+                                        <li>Проверьте компрессию (должна быть 12-13 атм)</li>
+                                        <li>Осмотрите масло на щупе (не должно быть эмульсии)</li>
+                                        <li>Проверьте уровень охлаждающей жидкости</li>
+                                        <li>Прислушайтесь к работе ГРМ (не должно быть шума)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-car-front"></i> Проверка кузова и подвески</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Осмотрите зазоры между кузовными панелями</li>
+                                        <li>Проверьте клиренс (должен быть 205-220 мм)</li>
+                                        <li>Осмотрите защиту картера (если есть)</li>
+                                        <li>Проверьте амортизаторы на течь</li>
+                                        <li>Проедьте по неровностям - не должно быть стуков</li>
+                                    </ul>
+                                    <div class="alert alert-warning mt-3">
+                                        <i class="bi bi-exclamation-triangle"></i> Низкий клиренс - частая проблема, проверьте днище на удары!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-cpu"></i> Проверка электроники</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Включите все функции мультимедиа</li>
+                                        <li>Проверьте работу системы полного привода на дисплее</li>
+                                        <li>Протестируйте все датчики и камеры</li>
+                                        <li>Убедитесь в отсутствии ошибок на приборке</li>
+                                        <li>Проверьте работу всех электроприводов</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-wrench"></i> Тест-драйв и внедорожная проверка</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Найдите грунтовую дорогу для теста 4WD</li>
+                                        <li>Проверьте работу на подъеме в 4WD режиме</li>
+                                        <li>Проедьте по легкому бездорожью</li>
+                                        <li>Проверьте торможение на разных покрытиях</li>
+                                        <li>Оцените управляемость в поворотах</li>
+                                    </ul>
+                                    <div class="alert alert-info mt-3">
+                                        <i class="bi bi-info-circle"></i> Идеально: тест-драйв должен включать и город, и легкое бездорожье.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-file-text"></i> Документы и гарантия</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Проверьте VIN-код в документах и на кузове</li>
+                                        <li>Уточните остаток гарантии (3 года/100 тыс. км)</li>
+                                        <li>Проверьте наличие сервисной книжки</li>
+                                        <li>Уточните историю ремонтов (если б/у)</li>
+                                        <li>Проверьте комплектацию по документам</li>
+                                    </ul>
+                                    <div class="alert alert-success mt-3">
+                                        <i class="bi bi-check-circle"></i> Новая Niva имеет хорошую гарантию - используйте ее!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <h5><i class="bi bi-exclamation-triangle"></i> Критические моменты - не покупать!</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Не работает полный привод</li>
+                                    <li>Рывки АМТ при переключении</li>
+                                    <li>Следы серьезного бездорожья на днище</li>
+                                    <li>Перегрев двигателя или муфты</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Несоответствие VIN-кодов</li>
+                                    <li>Следы перекраса кузова</li>
+                                    <li>Множественные ошибки ЭБУ</li>
+                                    <li>Признаки перегрева АМТ (запах гари)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Отзывы -->
+                <div class="tab-pane fade" id="opinions">
+                    <h3 class="mb-4">Отзывы владельцев новой Lada Niva</h3>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Статистика по отзывам</h5>
+                                    <p><strong>Общая оценка:</strong> 3.5/5 (987 отзывов)</p>
+                                    <p><strong>Комфорт:</strong> 4.0/5</p>
+                                    <p><strong>Проходимость:</strong> 3.2/5</p>
+                                    <p><strong>Надежность:</strong> 3.0/5</p>
+                                    <p><strong>Экономичность:</strong> 2.8/5</p>
+                                    <p><strong>Рекомендуют:</strong> 58% владельцев</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Основные причины недовольства</h5>
+                                    <p><strong>АМТ (робот):</strong> 45% владельцев</p>
+                                    <p><strong>Слабая проходимость:</strong> 38% владельцев</p>
+                                    <p><strong>Высокий расход:</strong> 52% владельцев</p>
+                                    <p><strong>Качество сборки:</strong> 28% владельцев</p>
+                                    <p><strong>Цена:</strong> 35% владельцев</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Форма добавления отзыва -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Добавить ваш отзыв о новой Lada Niva</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="reviewForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Имя</label>
+                                        <input type="text" class="form-control" placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Год выпуска</label>
+                                        <select class="form-select" required>
+                                            <option value="">Выберите год</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                            <option>2023</option>
+                                            <option>2024</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Пробег</label>
+                                        <input type="number" class="form-control" placeholder="тыс. км" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Версия</label>
+                                        <select class="form-select">
+                                            <option>Обычная (Base/Comfort)</option>
+                                            <option>Niva Travel</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">КПП</label>
+                                        <select class="form-select">
+                                            <option>Механика</option>
+                                            <option>Робот АМТ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Ваш отзыв</label>
+                                    <textarea class="form-control" rows="4" placeholder="Опишите ваш опыт, проходимость, проблемы с АМТ/приводом..." required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Оценка</label>
+                                    <div class="rating-stars fs-3">
+                                        <i class="bi bi-star" data-rating="1"></i>
+                                        <i class="bi bi-star" data-rating="2"></i>
+                                        <i class="bi bi-star" data-rating="3"></i>
+                                        <i class="bi bi-star" data-rating="4"></i>
+                                        <i class="bi bi-star" data-rating="5"></i>
+                                    </div>
+                                    <input type="hidden" id="ratingValue" value="0">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Список отзывов -->
+                    <h5 class="mb-3">Реальные отзывы владельцев</h5>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Александр, 2021 г.в., пробег 45 000 км</h6>
+                                    <small class="text-muted">Обычная версия, АМТ, для города</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Ожидал внедорожник, получил мучительство. АМТ - это ад: рывки, перегрев в пробках, на 30 тыс. ушел в аварийный режим. По гарантии меняли сцепление. Проходимость слабая: в снег 30 см - уже проблемы, клиренс маловат. Расход 12 литров по городу. Плюс: комфортный салон, хорошая музыка. Но за эти деньги лучше брать б/у Duster на механике.</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 3 недели назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Ирина, 2022 г.в., пробег 25 000 км</h6>
+                                    <small class="text-muted">Niva Travel, механика, для дачи</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Брала версию Travel с механикой. Для дачи (10 км грунтовки) - отлично! Понижайка реально помогает в грязи. Защита картера уже стоит. Клиренс 220 мм - достаточно. Расход 10.5 литров по смешанному. Минусы: пластик в салоне скрипит, шумоизоляция средняя. Но за эти деньги с полным приводом и понижайкой - аналогов нет. Советую только Travel и только механику!</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 1 месяц назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Дмитрий, 2023 г.в., пробег 15 000 км</h6>
+                                    <small class="text-muted">Обычная, механика, путешествия</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Брал с механикой - это спасение! 4WD работает нормально, в грязи и снегу помогает. Проехал Карелию - везде проехал, но по камням осторожно (клиренс). Двигатель слабоват для обгонов. Качество сборки: щели неравномерные, пластик дешевый. Но за 1.5 млн с полным приводом - нормально. Если бы не механику, оценка была бы 2 звезды. АМТ - не берите!</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 2 недели назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Ольга, 2020 г.в., пробег 60 000 км</h6>
+                                    <small class="text-muted">Обычная, АМТ, городская эксплуатация</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Проклятый автомобиль! За 3 года: 2 сцепления (по гарантии), замена муфты полного привода (40 тыс.), постоянные глюки мультимедиа. Расход 13 литров в городе. Зимой 4WD помогает, но включается с задержкой. Качество ужасное: обивка порвалась, люк протекает. Продаю и больше никогда не куплю Lada. Лучше доплатить и взять Kia или Hyundai.</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 1 месяц назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-outline-primary me-2">Показать еще отзывы</button>
+                        <a href="forum.html?model=niva-new" class="btn btn-link">Обсудить на форуме</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Блок итогового сравнения -->
+            <div class="card mt-5">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-bar-chart"></i> Итоговый вердикт: стоит ли покупать новую Niva?</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>👍 Стоит покупать, если:</h5>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Нужен комфортный городской SUV с возможностью съехать с асфальта</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Берете версию Travel с МКПП</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Готовы мириться с высоким расходом</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Нужен полный привод за разумные деньги</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Не планируете экстремальное бездорожье</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>👎 Не стоит покупать, если:</h5>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-x-circle-fill text-danger"></i> Рассматриваете АМТ (робот)</li>
+                                <li><i class="bi bi-x-circle-fill text-danger"></i> Нужен настоящий внедорожник для тяжелого бездорожья</li>
+                                <li><i class="bi bi-x-circle-fill text-danger"></i> Важна экономичность</li>
+                                <li><i class="bi bi-x-circle-fill text-danger"></i> Хотите динамичную езду</li>
+                                <li><i class="bi bi-x-circle-fill text-danger"></i> Цените бесшумность и идеальную сборку</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info mt-4">
+                        <h5><i class="bi bi-lightbulb"></i> Альтернативы на рынке</h5>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p><strong>Renault Duster</strong><br>Лучше во всем, но дороже на 500+ тыс.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p><strong>Lada Niva (классика)</strong><br>Настоящий внедорожник, но без комфорта</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p><strong>УАЗ Патриот</strong><br>Больше, проходимее, но менее комфортный</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>LADA Обзор</h5>
+                    <p>Объективные обзоры и реальные отзывы о автомобилях Lada.</p>
+                    <div class="mt-3">
+                        <small class="text-white-50">© 2025 LADA Обзор. Информационный проект.</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Другие модели</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="granta.html" class="text-white-50 text-decoration-none">Lada Granta</a></li>
+                        <li><a href="vesta.html" class="text-white-50 text-decoration-none">Lada Vesta</a></li>
+                        <li><a href="niva.html" class="text-white-50 text-decoration-none">Lada Niva (4x4)</a></li>
+                        <li><a href="largus.
+                            html" class="text-white-50 text-decoration-none">Lada Largus</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Рейтинг звездочки
+        document.querySelectorAll('.rating-stars i').forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                const stars = this.parentElement.querySelectorAll('i');
+                
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.classList.remove('bi-star');
+                        s.classList.add('bi-star-fill');
+                    } else {
+                        s.classList.remove('bi-star-fill');
+                        s.classList.add('bi-star');
+                    }
+                });
+                
+                document.getElementById('ratingValue').value = rating;
+            });
+        });
+
+        // Обработка формы отзыва
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за ваш отзыв о новой Lada Niva! После модерации он появится на сайте.');
+            this.reset();
+            
+            // Сброс звезд
+            const stars = this.querySelectorAll('.rating-stars i');
+            stars.forEach(star => {
+                star.classList.remove('bi-star-fill');
+                star.classList.add('bi-star');
+            });
+        });
+
+        // Анимация заполнения chart-fill
+        document.addEventListener('DOMContentLoaded', function() {
+            const chartFills = document.querySelectorAll('.chart-fill');
+            chartFills.forEach(fill => {
+                const width = fill.style.width;
+                fill.style.width = '0%';
+                setTimeout(() => {
+                    fill.style.width = width;
+                }, 500);
+            });
+            
+            // Автоматическое переключение табов из URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const tab = urlParams.get('tab');
+            if (tab) {
+                const triggerEl = document.querySelector(`[data-bs-target="#${tab}"]`);
+                if (triggerEl) {
+                    const tabInstance = new bootstrap.Tab(triggerEl);
+                    tabInstance.show();
+                }
+            }
+            
+            // Подсветка активной модели в меню
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

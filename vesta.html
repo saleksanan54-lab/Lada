@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lada Vesta: обзор, характеристики, слабые места, отзывы | LADA Обзор</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --lada-red: #c00;
+            --lada-dark: #1a1a1a;
+            --lada-light: #f8f9fa;
+            --vesta-blue: #0d6efd;
+        }
+        
+        .navbar-brand { font-weight: bold; color: var(--lada-red) !important; }
+        .nav-link.active { color: var(--lada-red) !important; font-weight: 600; }
+        footer { background-color: var(--lada-dark); }
+        
+        .model-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://avatars.mds.yandex.net/get-autoru-vos/4390195/2a0000017b2b62ef6cf4e12aed92372d3baa/orig');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .problem-card {
+            border-left: 4px solid;
+            transition: all 0.3s;
+        }
+        
+        .problem-card.critical { border-left-color: #dc3545; }
+        .problem-card.medium { border-left-color: #ffc107; }
+        .problem-card.low { border-left-color: #28a745; }
+        
+        .problem-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .spec-icon {
+            color: var(--vesta-blue);
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        .rating-stars {
+            color: #ffc107;
+        }
+        
+        .badge-severity-low { background-color: #28a745; }
+        .badge-severity-medium { background-color: #ffc107; color: #000; }
+        .badge-severity-high { background-color: #dc3545; }
+        
+        .transmission-badge {
+            background: var(--vesta-blue);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 2px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .alert-vesta {
+            border-left: 4px solid var(--vesta-blue);
+        }
+        
+        .generation-card {
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .generation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-car-front-fill"></i> LADA Обзор
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="modelsDropdown" role="button" data-bs-toggle="dropdown">
+                            Модели
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="granta.html">Lada Granta</a></li>
+                            <li><a class="dropdown-item active" href="vesta.html">Lada Vesta</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="niva.html">Lada Niva (4x4)</a></li>
+                            <li><a class="dropdown-item" href="niva-new.html">Lada Niva (новая)</a></li>
+                            <li><a class="dropdown-item" href="largus.html">Lada Largus</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Шапка модели -->
+    <header class="model-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent p-0">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Главная</a></li>
+                            <li class="breadcrumb-item text-white" aria-current="page">Lada Vesta</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold">Lada Vesta</h1>
+                    <p class="lead">Самый современный и технологичный автомобиль от AVTOVAZ. Флагман российской марки.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-3">
+                        <span class="badge bg-primary fs-6">Флагман</span>
+                        <span class="badge bg-secondary fs-6">От 1 200 000 ₽</span>
+                        <span class="badge bg-info fs-6">Лучший дизайн</span>
+                        <span class="badge bg-warning fs-6">Вариатор CVT</span>
+                    </div>
+                    <div class="rating-stars fs-4">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <span class="ms-2">4.1/5 на основе 2347 отзывов</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="https://avatars.mds.yandex.net/get-autoru-vos/4390195/2a0000017b2b62ef6cf4e12aed92372d3baa/orig" 
+                         class="img-fluid rounded shadow" alt="Lada Vesta" style="max-height: 250px;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Навигация по странице -->
+            <nav class="mb-5">
+                <div class="nav nav-tabs" id="modelTab" role="tablist">
+                    <button class="nav-link active" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs">
+                        <i class="bi bi-list-check"></i> Характеристики
+                    </button>
+                    <button class="nav-link" id="problems-tab" data-bs-toggle="tab" data-bs-target="#problems">
+                        <i class="bi bi-exclamation-triangle"></i> Слабые места
+                    </button>
+                    <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review">
+                        <i class="bi bi-search"></i> Что проверять
+                    </button>
+                    <button class="nav-link" id="opinions-tab" data-bs-toggle="tab" data-bs-target="#opinions">
+                        <i class="bi bi-chat-left-text"></i> Отзывы (63)
+                    </button>
+                </div>
+            </nav>
+
+            <div class="tab-content" id="modelTabContent">
+                <!-- Вкладка Характеристики -->
+                <div class="tab-pane fade show active" id="specs">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h3 class="mb-4">Флагманский седан и универсал</h3>
+                            <p class="lead">Lada Vesta — первый автомобиль AVTOVAZ, разработанный с нуля в XXI веке. Представлена в 2015 году как замена Priora.</p>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-speedometer2 spec-icon"></i>Динамика
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Разгон 0-100 км/ч:</strong> 10.2-12.8 сек</p>
+                                            <p><strong>Макс. скорость:</strong> 178-184 км/ч</p>
+                                            <p><strong>Тормозной путь:</strong> 39.5 м (100-0 км/ч)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-fuel-pump spec-icon"></i>Расход топлива
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Город:</strong> 9.3-10.5 л/100км</p>
+                                            <p><strong>Трасса:</strong> 6.1-6.8 л/100км</p>
+                                            <p><strong>Смешанный:</strong> 7.5-8.2 л/100км</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-rulers spec-icon"></i>Габариты
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Длина/Ширина:</strong> 4410/1764 мм</p>
+                                            <p><strong>Колесная база:</strong> 2635 мм</p>
+                                            <p><strong>Багажник:</strong> 480 л (седан)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="mt-4">Поколения и рестайлинги</h4>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card generation-card mb-3">
+                                        <div class="card-body">
+                                            <h5>Первое поколение (2015-2021)</h5>
+                                            <ul class="feature-list">
+                                                <li><i class="bi bi-check text-success"></i> Дебют модели</li>
+                                                <li><i class="bi bi-check text-success"></i> Двигатели 1.6 и 1.8</li>
+                                                <li><i class="bi bi-x text-danger"></i> Без мультимедиа в базе</li>
+                                                <li><i class="bi bi-check text-success"></i> Механика и АМТ</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card generation-card mb-3">
+                                        <div class="card-body">
+                                            <h5>Рестайлинг (2021-н.в.)</h5>
+                                            <ul class="feature-list">
+                                                <li><i class="bi bi-check text-success"></i> Обновленный дизайн</li>
+                                                <li><i class="bi bi-check text-success"></i> Мультимедиа в базе</li>
+                                                <li><i class="bi bi-check text-success"></i> Вариатор Jatco CVT7</li>
+                                                <li><i class="bi bi-check text-success"></i> Улучшенная шумоизоляция</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>Двигатели и трансмиссии</h4>
+                            <div class="table-responsive mb-4">
+                                <table class="table table-striped comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Параметр</th>
+                                            <th>1.6 л 106 л.с.</th>
+                                            <th>1.6 л 113 л.с.</th>
+                                            <th>1.8 л 122 л.с.</th>
+                                            <th>1.6 л CNG 100 л.с.</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Тип</strong></td>
+                                            <td>21129 (16V)</td>
+                                            <td>21129 (16V)</td>
+                                            <td>21179 (16V)</td>
+                                            <td>21129 (16V, газ)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Крутящий момент</strong></td>
+                                            <td>148 Н·м</td>
+                                            <td>151 Н·м</td>
+                                            <td>170 Н·м</td>
+                                            <td>135 Н·м</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Коробки передач</strong></td>
+                                            <td>МКПП-5, АМТ</td>
+                                            <td>МКПП-5, CVT</td>
+                                            <td>МКПП-5, CVT</td>
+                                            <td>МКПП-5</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Разгон 0-100</strong></td>
+                                            <td>11.2 с</td>
+                                            <td>12.8 с (CVT)</td>
+                                            <td>10.2 с</td>
+                                            <td>12.5 с</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Экологический класс</strong></td>
+                                            <td>Евро-5</td>
+                                            <td>Евро-5</td>
+                                            <td>Евро-5</td>
+                                            <td>Евро-5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4>Основные комплектации</h4>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="mb-0">Classic</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Кондиционер, 2 подушки безопасности, ABS, ESP, аудиоподготовка</p>
+                                            <p class="fw-bold text-danger">От 1 200 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="mb-0">Comfort</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Климат-контроль, мультимедиа с экраном, датчики света и дождя</p>
+                                            <p class="fw-bold text-danger">От 1 350 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="mb-0">Luxe</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Кожаный руль, подогревы, камера заднего вида, 4 подушки безопасности</p>
+                                            <p class="fw-bold text-danger">От 1 500 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card sticky-top" style="top: 20px;">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Краткий вердикт</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6>👍 Основные достоинства:</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Современный дизайн</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Хорошая управляемость</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Просторный салон</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Доступный вариатор</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Полный комплект безопасности</li>
+                                    </ul>
+                                    
+                                    <h6 class="mt-3">👎 Критические недостатки:</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Проблемный вариатор CVT7</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Глюки мультимедиа</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Стуки в подвеске</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Запотевание фар</li>
+                                    </ul>
+                                    
+                                    <div class="alert alert-vesta mt-3">
+                                        <i class="bi bi-lightbulb"></i>
+                                        <strong>Рекомендация:</strong> Берите с МКПП или будьте готовы к особенностям вариатора.
+                                    </div>
+                                    
+                                    <div class="alert alert-warning mt-3">
+                                        <i class="bi bi-exclamation-triangle"></i>
+                                        <strong>Внимание:</strong> Двигатель 1.8 л имеет проблему с цепью ГРМ до 2019 года.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mt-4">
+                                <div class="card-header bg-info text-white">
+                                    <h5 class="mb-0">Модификации</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>Vesta Sedan</strong> - классический седан</p>
+                                    <p><strong>Vesta SW</strong> - универсал (до 2021)</p>
+                                    <p><strong>Vesta SW Cross</strong> - внедорожный универсал</p>
+                                    <p><strong>Vesta Cross</strong> - седан с повышенной проходимостью</p>
+                                    <p><strong>Vesta CNG</strong> - версия на газовом топливе</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Слабые места -->
+                <div class="tab-pane fade" id="problems">
+                    <h3 class="mb-4">Слабые места Lada Vesta: что ломается чаще всего</h3>
+                    
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle"></i> Информация актуальна для Vesta после рестайлинга 2021 года
+                    </div>
+
+                    <div class="row">
+                        <!-- Проблема 1 - Критичная -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card critical h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Вариатор Jatco CVT7</h5>
+                                        <span class="badge badge-severity-high">Критично</span>
+                                    </div>
+                                    <p class="card-text">Японский вариатор, адаптированный для российских условий. Требует бережной эксплуатации и своевременного обслуживания.</p>
+                                    <p><strong>Симптомы:</strong> "зависание" оборотов при разгоне, рывки, гул на высоких оборотах, перегрев в пробках.</p>
+                                    <p><strong>Решение:</strong> менять масло каждые 60 тыс.
+                                        км, не буксовать, прогревать зимой.</p>
+                                    <p><strong>Стоимость ремонта:</strong> 60-120 тыс. рублей</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Встречаемость: ~18% отзывов, пробег до проблемы: 70-120 тыс. км</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 2 - Средняя -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card medium h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Мультимедиа-система</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">Штатная система "Мультимедиа Некст" часто глючит, особенно в мороз или жару.</p>
+                                    <p><strong>Симптомы:</strong> зависания, самопроизвольные перезагрузки, не работает Bluetooth, пропадает звук.</p>
+                                    <p><strong>Решение:</strong> обновление прошивки, замена на стороннюю систему, гарантийный ремонт.</p>
+                                    <p><strong>Стоимость ремонта:</strong> 5-15 тыс. рублей</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Встречаемость: ~45% отзывов</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 3 - Средняя -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card medium h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Передняя подвеска</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">Стуки и люфты в передней подвеске, особенно в опорных подшипниках и шаровых.</p>
+                                    <p><strong>Симптомы:</strong> стуки на мелких неровностях, скрипы при повороте руля, люфт.</p>
+                                    <p><strong>Решение:</strong> замена опорных подшипников, шаровых опор, сайлентблоков.</p>
+                                    <p><strong>Стоимость ремонта:</strong> 8-20 тыс. рублей</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Пробег до проблемы: 20-50 тыс. км</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 4 - Низкая -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card low h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Запотевание фар</h5>
+                                        <span class="badge badge-severity-low">Низко</span>
+                                    </div>
+                                    <p class="card-text">Конденсат внутри фар головного света, особенно после мойки или в сырую погоду.</p>
+                                    <p><strong>Симптомы:</strong> запотевание стекла фары, снижение светового потока.</p>
+                                    <p><strong>Решение:</strong> замена уплотнителей, просверливание вентиляционных отверстий, гарантийная замена.</p>
+                                    <p><strong>Стоимость ремонта:</strong> 0-5 тыс. рублей</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Встречаемость: ~30% отзывов</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 5 - Низкая -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card low h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Двигатель 1.8 л (до 2019)</h5>
+                                        <span class="badge badge-severity-low">Низко</span>
+                                    </div>
+                                    <p class="card-text">Проблемы с цепью ГРМ на ранних моторах 21179. Цепь растягивалась раньше срока.</p>
+                                    <p><strong>Симптомы:</strong> шум при работе, ошибка CHECK ENGINE, трудный запуск.</p>
+                                    <p><strong>Решение:</strong> замена цепи ГРМ и успокоителей, регулярная диагностика.</p>
+                                    <p><strong>Стоимость ремонта:</strong> 15-25 тыс. рублей</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Актуально для авто до 2019 года</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 6 - Средняя -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card medium h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Электрические проблемы</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">Отказы датчиков, проблемы с центральным замком, неработающие стеклоподъемники.</p>
+                                    <p><strong>Симптомы:</strong> ошибки на панели приборов, не работают электроприводы.</p>
+                                    <p><strong>Решение:</strong> диагностика и замена датчиков, чистка контактов.</p>
+                                    <p><strong>Стоимость ремонта:</strong> 3-10 тыс. рублей</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Встречаемость: ~20% отзывов</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success mt-4">
+                        <h5><i class="bi bi-check-circle"></i> Что работает надежно</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><strong>Кузов:</strong> хорошая антикоррозийная обработка</li>
+                                    <li><strong>Двигатель 1.6:</strong> проверенная временем конструкция</li>
+                                    <li><strong>Механика:</strong> надежная 5-ступенчатая КПП</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><strong>Тормозная система:</strong> эффективные тормоза с ABS</li>
+                                    <li><strong>Система безопасности:</strong> 4 подушки, ESP, ISOFIX</li>
+                                    <li><strong>Подвеска задняя:</strong> надежная полузависимая балка</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Что проверять -->
+                <div class="tab-pane fade" id="review">
+                    <h3 class="mb-4">Полный чек-лист при покупке Lada Vesta (новая и б/у)</h3>
+                    
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-gear-fill"></i> Проверка вариатора (CVT)</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li><strong>Прогрев:</strong> заведите и прогрейте 5-10 минут</li>
+                                        <li><strong>Холодный старт:</strong> не должно быть рывков при начале движения</li>
+                                        <li><strong>Разгон:</strong> плавный набор скорости без "зависания" оборотов</li>
+                                        <li><strong>Переключение:</strong> режимы P-R-N-D должны включаться без стуков</li>
+                                        <li><strong>Тест-драйв:</strong> проехать 20-30 км в разных режимах</li>
+                                    </ol>
+                                    <div class="alert alert-warning mt-3">
+                                        <i class="bi bi-exclamation-triangle"></i> Попросите историю замены масла в вариаторе!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-cpu"></i> Проверка электроники</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Включите все функции мультимедиа</li>
+                                        <li>Проверьте работу всех датчиков парковки</li>
+                                        <li>Протестируйте камеру заднего вида</li>
+                                        <li>Убедитесь в отсутствии ошибок на приборке</li>
+                                        <li>Проверьте работу всех стеклоподъемников</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-car-front"></i> Проверка кузова и ЛКП</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Осмотрите зазоры между кузовными панелями</li>
+                                        <li>Проверьте фары на запотевание</li>
+                                        <li>Осмотрите пороги и арки на коррозию</li>
+                                        <li>Проверьте работу всех дверей, капота, багажника</li>
+                                        <li>Используйте толщиномер для проверки перекраса</li>
+                                    </ul>
+                                    <div class="alert alert-info mt-3">
+                                        <i class="bi bi-info-circle"></i> У новой Vesta часто бывают сколы на краске
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-wrench"></i> Проверка двигателя</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Заведите холодный двигатель</li>
+                                        <li>Проверьте цвет выхлопа (не должно быть синего дыма)</li>
+                                        <li>Осмотрите масло на щупе (не должно быть эмульсии)</li>
+                                        <li>Проверьте уровень охлаждающей жидкости</li>
+                                        <li>Прислушайтесь к работе ГРМ (не должно быть шума)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-speedometer"></i> Проверка ходовой части</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Проедьте по неровной дороге - не должно быть стуков</li>
+                                        <li>Покрутите руль на месте - не должно быть скрипов</li>
+                                        <li>Проверьте люфт в рулевом управлении</li>
+                                        <li>Осмотрите пыльники ШРУСов и рулевых тяг</li>
+                                        <li>Проверьте состояние тормозных дисков и колодок</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-file-text"></i> Документы и история</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Проверьте VIN-код в документах и на кузове</li>
+                                        <li>Изучите сервисную книжку (все ТО должны быть)</li>
+                                        <li>Проверьте наличие гарантии (если новая)</li>
+                                        <li>Уточните пробег по диагностике ЭБУ</li>
+                                        <li>Проверьте автомобиль по базам на аварии</li>
+                                    </ul>
+                                    <div class="alert alert-danger mt-3">
+                                        <i class="bi bi-exclamation-octagon"></i> Не покупайте без полной истории!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-danger">
+                        <h5><i class="bi bi-exclamation-triangle"></i> Красные флаги - не покупать!</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Вибрация двигателя на холостых</li>
+                                    <li>Рывки вариатора при разгоне</li>
+                                    <li>Следы перекраса кузова</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Несоответствие VIN-кодов</li>
+                                    <li>Отсутствие сервисной истории</li>
+                                    <li>Множественные ошибки ЭБУ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Отзывы -->
+                <div class="tab-pane fade" id="opinions">
+                    <h3 class="mb-4">Реальные отзывы владельцев Lada Vesta</h3>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Статистика по отзывам</h5>
+                                    <p><strong>Общая оценка:</strong> 4.1/5 (2347 отзывов)</p>
+                                    <p><strong>Надежность:</strong> 3.8/5</p>
+                                    <p><strong>Комфорт:</strong> 4.3/5</p>
+                                    <p><strong>Динамика:</strong> 3.9/5</p>
+                                    <p><strong>Экономичность:</strong> 4.0/5</p>
+                                    <p><strong>Рекомендуют:</strong> 78% владельцев</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Распространенные проблемы</h5>
+                                    <p><strong>Мультимедиа:</strong> 45% владельцев</p>
+                                    <p><strong>Подвеска:</strong> 38% владельцев</p>
+                                    <p><strong>Вариатор:</strong> 18% владельцев</p>
+                                    <p><strong>Электрика:</strong> 22% владельцев</p>
+                                    <p><strong>Запотевание фар:</strong> 30% владельцев</p>
+                                    <p><strong>Качество сборки:</strong> 25% владельцев</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Форма добавления отзыва -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Добавить ваш отзыв о Lada Vesta</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="reviewForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Имя</label>
+                                        <input type="text" class="form-control" placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Год выпуска</label>
+                                        <select class="form-select" required>
+                                            <option value="">Выберите год</option>
+                                            <option>2016</option>
+                                            <option>2017</option>
+                                            <option>2018</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                            <option>2023</option>
+                                            <option>2024</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Пробег</label>
+                                        <input type="number" class="form-control" placeholder="тыс. км" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Двигатель</label>
+                                        <select class="form-select">
+                                            <option>1.6 МКПП</option>
+                                            <option>1.6 CVT</option>
+                                            <option>1.8 МКПП</option>
+                                            <option>1.8 CVT</option>
+                                            <option>1.6 CNG</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Кузов</label>
+                                        <select class="form-select">
+                                            <option>Седан</option>
+                                            <option>Vesta SW</option>
+                                            <option>Vesta SW Cross</option>
+                                            <option>Vesta Cross</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Ваш отзыв</label>
+                                    <textarea class="form-control" rows="4" placeholder="Опишите ваш опыт владения, проблемы, достоинства..." required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Оценка</label>
+                                    <div class="rating-stars fs-3">
+                                        <i class="bi bi-star" data-rating="1"></i>
+                                        <i class="bi bi-star" data-rating="2"></i>
+                                        <i class="bi bi-star" data-rating="3"></i>
+                                        <i class="bi bi-star" data-rating="4"></i>
+                                        <i class="bi bi-star" data-rating="5"></i>
+                                    </div>
+                                    <input type="hidden" id="ratingValue" value="0">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Список отзывов -->
+                    <h5 class="mb-3">Последние отзывы владельцев</h5>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Александр, 2022 г.в., 1.6 CVT, пробег 35 000 км</h6>
+                                    <small class="text-muted">Седан, комплектация Luxe</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Брал новую после рестайлинга. За 2 года: заменил по гарантии мультимедиа (2 раза), менял опорные подшипники. Вариатор пока работает нормально, но очень боюсь за него. Расход 8.5 литров по городу. Дизайн отличный, управляемость хорошая.</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 1 неделю назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Марина, 2020 г.в., 1.8 МКПП, пробег 70 000 км</h6>
+                                    <small class="text-muted">Vesta SW Cross, комплектация Comfort</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Универсал с повышенной проходимостью. Отличная машина для дачи и поездок на природу. На 50 тыс. км меняла цепь ГРМ (проблема известная). Фары постоянно потеют. Но в целом - лучшая Лада из всех, что были. Механика работает идеально.</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 2 недели назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Дмитрий, 2023 г.в., 1.6 CVT, пробег 15 000 км</h6>
+                                    <small class="text-muted">Седан, комплектация Classic</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Первая новая машина в жизни. Взял с вариатором - пока все отлично. Расход 7.8 литра по смешанному циклу. Шумоизоляция намного лучше, чем у Гранты. Музыка глючила один раз - перезагрузил, помогло. Советую брать с вариатором - ездить одно удовольствие.</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 3 недели назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Ольга, 2021 г.в., 1.6 МКПП, пробег 45 000 км</h6>
+                                    <small class="text-muted">Седан, комплектация Comfort</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Разочарована. На 30 тыс. км начались стуки в подвеске, меняла опорные подшипники. Музыка работает через раз. Кондиционер слабый. В салоне появились скрипы. Дорогое обслуживание для Лады. Лучше бы взяла Solaris.</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 1 месяц назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-outline-primary me-2">Показать еще отзывы</button>
+                        <a href="forum.html?model=vesta" class="btn btn-link">Обсудить на форуме</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Блок сравнения с конкурентами -->
+            <div class="card mt-5">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="bi bi-bar-chart"></i> Сравнение с конкурентами</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Модель</th>
+                                    <th>Цена от</th>
+                                    <th>Двигатель</th>
+                                    <th>Расход</th>
+                                    <th>Багажник</th>
+                                    <th>Гарантия</th>
+                                    <th>Плюсы</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-primary">
+                                    <td><strong>Lada Vesta</strong></td>
+                                    <td>1 200 000 ₽</td>
+                                    <td>1.6 (106 л.с.)</td>
+                                    <td>7.5 л/100км</td>
+                                    <td>480 л</td>
+                                    <td>3 года</td>
+                                    <td>Дизайн, цена, родной сервис</td>
+                                </tr>
+                                <tr>
+                                    <td>Hyundai Solaris</td>
+                                    <td>1 400 000 ₽</td>
+                                    <td>1.6 (123 л.с.)</td>
+                                    <td>6.9 л/100км</td>
+                                    <td>480 л</td>
+                                    <td>5 лет</td>
+                                    <td>Качество сборки, гарантия</td>
+                                </tr>
+                                <tr>
+                                    <td>Kia Rio</td>
+                                    <td>1 350 000 ₽</td>
+                                    <td>1.6 (123 л.с.)</td>
+                                    <td>7.0 л/100км</td>
+                                    <td>500 л</td>
+                                    <td>5 лет</td>
+                                    <td>Комплектация, надежность</td>
+                                </tr>
+                                <tr>
+                                    <td>Volkswagen Polo</td>
+                                    <td>1 500 000 ₽</td>
+                                    <td>1.6 (110 л.с.)</td>
+                                    <td>7.2 л/100км</td>
+                                    <td>460 л</td>
+                                    <td>3 года</td>
+                                    <td>Престиж, управляемость</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert alert-info mt-3">
+                        <i class="bi bi-lightbulb"></i> <strong>Вывод:</strong> Vesta предлагает лучшее соотношение цена/качество среди конкурентов, но уступает в гарантии и репутации надежности.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>LADA Обзор</h5>
+                    <p>Объективные обзоры и реальные отзывы о автомобилях Lada.</p>
+                    <div class="mt-3">
+                        <small class="text-white-50">© 2025  LADA Обзор. Информационный проект.</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Другие модели</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="granta.html" class="text-white-50 text-decoration-none">Lada Granta</a></li>
+                        <li><a href="niva.html" class="text-white-50 text-decoration-none">Lada Niva (4x4)</a></li>
+                        <li><a href="niva-new.html" class="text-white-50 text-decoration-none">Lada Niva (travel)</a></li>
+                        <li><a href="largus.html" class="text-white-50 text-decoration-none">Lada Largus</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Рейтинг звездочки
+        document.querySelectorAll('.rating-stars i').forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                const stars = this.parentElement.querySelectorAll('i');
+                
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.classList.remove('bi-star');
+                        s.classList.add('bi-star-fill');
+                    } else {
+                        s.classList.remove('bi-star-fill');
+                        s.classList.add('bi-star');
+                    }
+                });
+                
+                document.getElementById('ratingValue').value = rating;
+            });
+        });
+
+        // Обработка формы отзыва
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за ваш отзыв о Lada Vesta! После модерации он появится на сайте.');
+            this.reset();
+            
+            // Сброс звезд
+            const stars = this.querySelectorAll('.rating-stars i');
+            stars.forEach(star => {
+                star.classList.remove('bi-star-fill');
+                star.classList.add('bi-star');
+            });
+        });
+
+        // Автоматическое переключение табов из URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tab = urlParams.get('tab');
+            if (tab) {
+                const triggerEl = document.querySelector(`[data-bs-target="#${tab}"]`);
+                if (triggerEl) {
+                    const tabInstance = new bootstrap.Tab(triggerEl);
+                    tabInstance.show();
+                }
+            }
+            
+            // Подсветка активной модели в меню
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

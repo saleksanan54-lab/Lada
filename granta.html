@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lada Granta: характеристики, слабые места, отзывы | LADA Обзор</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        /* Стили из главной страницы */
+        :root {
+            --lada-red: #c00;
+            --lada-dark: #1a1a1a;
+            --lada-light: #f8f9fa;
+        }
+        
+        .navbar-brand { font-weight: bold; color: var(--lada-red) !important; }
+        .nav-link.active { color: var(--lada-red) !important; font-weight: 600; }
+        footer { background-color: var(--lada-dark); }
+        
+        .model-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1609521263049-2d1d6b8c224b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .problem-card {
+            border-left: 4px solid var(--lada-red);
+            transition: all 0.3s;
+        }
+        
+        .problem-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .spec-icon {
+            color: var(--lada-red);
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        .rating-stars {
+            color: #ffc107;
+        }
+        
+        .badge-severity-low { background-color: #28a745; }
+        .badge-severity-medium { background-color: #ffc107; color: #000; }
+        .badge-severity-high { background-color: #dc3545; }
+    </style>
+</head>
+<body>
+    <!-- Навигация (копируем из главной) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-car-front-fill"></i> LADA Обзор
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="modelsDropdown" role="button" data-bs-toggle="dropdown">
+                            Модели
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="granta.html">Lada Granta</a></li>
+                            <li><a class="dropdown-item" href="vesta.html">Lada Vesta</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="niva.html">Lada Niva (4x4)</a></li>
+                            <li><a class="dropdown-item" href="niva-new.html">Lada Niva (travel)</a></li>
+                            <li><a class="dropdown-item" href="largus.html">Lada Largus</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Шапка модели -->
+    <header class="model-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent p-0">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Главная</a></li>
+                            <li class="breadcrumb-item text-white" aria-current="page">Lada Granta</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold">Lada Granta</h1>
+                    <p class="lead">Самый доступный новый автомобиль в России. Идеален как первый автомобиль.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-3">
+                        <span class="badge bg-danger fs-6">Бюджетный седан</span>
+                        <span class="badge bg-secondary fs-6">От 650 000 ₽</span>
+                        <span class="badge bg-success fs-6">Низкая стоимость обслуживания</span>
+                    </div>
+                    <div class="rating-stars fs-4">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <i class="bi bi-star"></i>
+                        <span class="ms-2">3.8/5 на основе 1247 отзывов</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Навигация по странице -->
+            <nav class="mb-5">
+                <div class="nav nav-tabs" id="modelTab" role="tablist">
+                    <button class="nav-link active" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs">
+                        <i class="bi bi-list-check"></i> Характеристики
+                    </button>
+                    <button class="nav-link" id="problems-tab" data-bs-toggle="tab" data-bs-target="#problems">
+                        <i class="bi bi-exclamation-triangle"></i> Слабые места
+                    </button>
+                    <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review">
+                        <i class="bi bi-search"></i> Что проверять
+                    </button>
+                    <button class="nav-link" id="opinions-tab" data-bs-toggle="tab" data-bs-target="#opinions">
+                        <i class="bi bi-chat-left-text"></i> Отзывы (47)
+                    </button>
+                </div>
+            </nav>
+
+            <div class="tab-content" id="modelTabContent">
+                <!-- Вкладка Характеристики -->
+                <div class="tab-pane fade show active" id="specs">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h3 class="mb-4">Технические характеристики</h3>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-speedometer2 spec-icon"></i>Динамика
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Разгон 0-100 км/ч:</strong> 11.9 сек</p>
+                                            <p><strong>Макс. скорость:</strong> 178 км/ч</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-fuel-pump spec-icon"></i>Расход топлива
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Город:</strong> 9.1 л/100км</p>
+                                            <p><strong>Трасса:</strong> 6.1 л/100км</p>
+                                            <p><strong>Смешанный:</strong> 7.6 л/100км</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>Двигатели</h4>
+                            <div class="table-responsive mb-4">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Модель</th>
+                                            <th>Объем</th>
+                                            <th>Мощность</th>
+                                            <th>Крутящий момент</th>
+                                            <th>Тип</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>11186</td>
+                                            <td>1.6 л</td>
+                                            <td>90 л.с.</td>
+                                            <td>140 Н·м</td>
+                                            <td>8-клапанный</td>
+                                        </tr>
+                                        <tr>
+                                            <td>21116</td>
+                                            <td>1.6 л</td>
+                                            <td>106 л.с.</td>
+                                            <td>148 Н·м</td>
+                                            <td>16-клапанный</td>
+                                        </tr>
+                                        <tr>
+                                            <td>21129</td>
+                                            <td>1.6 л</td>
+                                            <td>98 л.с.</td>
+                                            <td>145 Н·м</td>
+                                            <td>16-клапанный (Евро-5)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4>Комплектации</h4>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Classic</h5>
+                                            <p class="card-text">Базовая комплектация. Кондиционер, электроусилитель руля, ABS.</p>
+                                            <p class="fw-bold text-danger">От 650 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Comfort</h5>
+                                            <p class="card-text">Передние электростеклоподъемники, аудиоподготовка, бортовой компьютер.</p>
+                                            <p class="fw-bold text-danger">От 720 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Luxe</h5>
+                                            <p class="card-text">Климат-контроль, задние электростеклоподъемники, датчики света и дождя.</p>
+                                            <p class="fw-bold text-danger">От 780 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card sticky-top" style="top: 20px;">
+                                <div class="card-header bg-danger text-white">
+                                    <h5 class="mb-0">Краткий вердикт</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6>👍 Достоинства:</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Самая низкая цена</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Дешевое обслуживание</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Доступные запчасти</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Простая конструкция</li>
+                                    </ul>
+                                    
+                                    <h6 class="mt-3">👎 Слабые места:</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Качество отделки салона</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Робот АМТ (проблемный)</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Шумоизоляция</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Динамика (на 8-клапанном)</li>
+                                    </ul>
+                                    
+                                    <div class="alert alert-warning mt-3">
+                                        <i class="bi bi-lightbulb"></i>
+                                        <strong>Совет:</strong> Выбирайте с механической КПП и 16-клапанным двигателем.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Слабые места -->
+                <div class="tab-pane fade" id="problems">
+                    <h3 class="mb-4">Слабые места и типичные проблемы Lada Granta</h3>
+                    
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle"></i> Проблемы указаны для Granta второго поколения (после 2018 года)
+                    </div>
+
+                    <div class="row">
+                        <!-- Проблема 1 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Роботизированная КПП (АМТ)</h5>
+                                        <span class="badge badge-severity-high">Критично</span>
+                                    </div>
+                                    <p class="card-text">Самая частая и серьезная проблема. Робот Jatco склонен к перегреву, рывкам при переключении и преждевременному выходу из строя.</p>
+                                    <p><strong>Симптомы:</strong> рывки при переключении, "пинание" сцепления, перегрев в пробках.</p>
+                                    <p><strong>Решение:</strong> выбирать механическую КПП или быть готовым к дорогому ремонту (30-50 тыс. руб.)</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Встречаемость: ~23% отзывов</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 2 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Качество отделки салона</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">Скрипы пластика, люфт рычага КПП, быстрое появление потертостей на руле и ручке КПП.</p>
+                                    <p><strong>Симптомы:</strong> скрипы на неровностях, дребезжание, ощущение дешевизны.</p>
+                                    <p><strong>Решение:</strong> обработка силиконовой смазкой, установка дополнительных уплотнителей.</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Встречаемость: ~65% отзывов</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 3 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Передняя подвеска</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">Быстрый износ стоек стабилизатора, ступичных подшипников и сайлентблоков.</p>
+                                    <p><strong>Симптомы:</strong> стуки на неровностях, люфт в передних колесах.</p>
+                                    <p><strong>Решение:</strong> замена на более качественные аналоги (например, SS20, Lemforder).</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Пробег до проблемы: 20-40 тыс. км</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 4 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Электрика</h5>
+                                        <span class="badge badge-severity-low">Низко</span>
+                                    </div>
+                                    <p class="card-text">Проблемы с датчиками (ABS, скорости), качество разъемов проводки, окисление контактов.</p>
+                                    <p><strong>Симптомы:</strong> ошибки на панели приборов, отказ электростеклоподъемников.</p>
+                                    <p><strong>Решение:</strong> чистка контактов, обработка антикором, замена датчиков.</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Встречаемость: ~15% отзывов</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <h5><i class="bi bi-lightning-charge"></i> Решение проблем по гарантии</h5>
+                        <p>Большинство этих проблем покрывается гарантией (3 года или 100 000 км). При покупке обязательно:</p>
+                        <ol>
+                            <li>Проверьте наличие всех ТО в сервисной книжке</li>
+                            <li>Убедитесь, что не было ДТП</li>
+                            <li>Проведите полную диагностику в официальном сервисе</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Вкладка Что проверять -->
+                <div class="tab-pane fade" id="review">
+                    <h3 class="mb-4">Что проверять при покупке Lada Granta (б/у)</h3>
+                    
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-gear"></i> Проверка трансмиссии</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li><strong>Для АМТ:</strong> прогрейте коробку (20-30 мин в пробке), проверьте переключения 1-2-3 передачи</li>
+                                        <li><strong>Для механики:</strong> плавность хода рычага, отсутствие вибраций</li>
+                                        <li>Включите заднюю передачу несколько раз</li>
+                                        <li>При движении на 60 км/ч включите 4-ю передачу - не должно быть рывков</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-car-front"></i> Проверка кузова</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Осмотрите пороги и арки колес на предмет коррозии</li>
+                                        <li>Проверьте равномерность зазоров между кузовными панелями</li>
+                                        <li>Откройте/закройте все двери, капот, багажник</li>
+                                        <li>Осмотрите стекла на предмет сколов и трещин</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-speedometer2"></i> Проверка двигателя и ходовой</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Заведите холодный двигатель - не должно быть синего дыма</li>
+                                        <li>Проверьте уровень и цвет масла (не должно быть эмульсии)</li>
+                                        <li>Проедьте по неровной дороге - не должно быть стуков в подвеске</li>
+                                        <li>Резко затормозите - автомобиль не должно уводить в сторону</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-plug"></i> Проверка электроники</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Включите все электроприборы одновременно (фары, обогревы, кондиционер)</li>
+                                        <li>Проверьте работу всех электростеклоподъемников</li>
+                                        <li>Убедитесь в отсутствии ошибок на приборной панели</li>
+                                        <li>Проверьте работу центрального замка со всех дверей</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-danger">
+                        <h5><i class="bi bi-exclamation-octagon"></i> Критические моменты</h5>
+                        <p><strong>Не покупайте автомобиль, если:</strong></p>
+                        <ul>
+                            <li>Есть следы перекраса (проверьте толщиномером)</li>
+                            <li>VIN-код на кузове не соответствует документам</li>
+                            <li>Двигатель сильно вибрирует на холостых</li>
+                            <li>В сервисной книжке пропущены ТО</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Вкладка Отзывы -->
+                <div class="tab-pane fade" id="opinions">
+                    <h3 class="mb-4">Отзывы владельцев Lada Granta</h3>
+                    
+                    <!-- Форма добавления отзыва -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Добавить ваш отзыв</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="reviewForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Имя</label>
+                                        <input type="text" class="form-control" placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Год выпуска авто</label>
+                                        <input type="number" class="form-control" min="1900" max="2025" placeholder="2005" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Ваш отзыв</label>
+                                    <textarea class="form-control" rows="3" placeholder="Опишите ваш опыт владения..." required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Оценка</label>
+                                    <div class="rating-stars fs-3">
+                                        <i class="bi bi-star" data-rating="1"></i>
+                                        <i class="bi bi-star" data-rating="2"></i>
+                                        <i class="bi bi-star" data-rating="3"></i>
+                                        <i class="bi bi-star" data-rating="4"></i>
+                                        <i class="bi bi-star" data-rating="5"></i>
+                                    </div>
+                                    <input type="hidden" id="ratingValue" value="0">
+                                </div>
+                                <button type="submit" class="btn btn-danger">Отправить отзыв</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Список отзывов -->
+                    <h5 class="mb-3">Последние отзывы</h5>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <h6 class="card-subtitle mb-2 text-muted">Игорь, 2021 г.в., пробег 45 000 км</h6>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Брал как первую машину. За 2 года эксплуатации: поменял стойки стабилизатора (на 30 тыс. км), был гарантийный ремонт мультимедиа. В целом доволен, но скрипы салона достали.</p>
+                            <small class="text-muted">Опубликовано 2 недели назад</small>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <h6 class="card-subtitle mb-2 text-muted">Анна, 2022 г.в., пробег 15 000 км</h6>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Брала с роботом АМТ - большая ошибка! На 10 тыс. км начались рывки, на 12 тыс. коробка ушла в аварийный режим. По гарантии заменили сцепление. Советую брать только на механике!</p>
+                            <small class="text-muted">Опубликовано 1 месяц назад</small>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <h6 class="card-subtitle mb-2 text-muted">Сергей, 2019 г.в., пробег 85 000 км</h6>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Отличная рабочая лошадка! За 4 года только ТО и замена расходников. Расход 7.5 литров по трассе. За такие деньги лучшего варианта нет. Главное - вовремя обслуживать.</p>
+                            <small class="text-muted">Опубликовано 2 месяца назад</small>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>LADA Обзор</h5>
+                    <p>Объективные обзоры и реальные отзывы о автомобилях Lada.</p>
+                    <div class="mt-3">
+                        <small class="text-white-50">© 2025 LADA Обзор. Информационный проект.</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Другие модели</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="vesta.html" class="text-white-50 text-decoration-none">Lada Vesta</a></li>
+                        <li><a href="niva.html" class="text-white-50 text-decoration-none">Lada Niva (4x4)</a></li>
+                        <li><a href="niva-new.html" class="text-white-50 text-decoration-none">Lada Niva (travel)</a></li>
+                        <li><a href="largus.html" class="text-white-50 text-decoration-none">Lada Largus</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Рейтинг звездочки
+        document.querySelectorAll('.rating-stars i').forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                const stars = this.parentElement.querySelectorAll('i');
+                
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.classList.remove('bi-star');
+                        s.classList.add('bi-star-fill');
+                    } else {
+                        s.classList.remove('bi-star-fill');
+                        s.classList.add('bi-star');
+                    }
+                });
+                
+                document.getElementById('ratingValue').value = rating;
+            });
+        });
+
+        // Обработка формы отзыва
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за ваш отзыв! После модерации он появится на сайте.');
+            this.reset();
+            
+            // Сброс звезд
+            const stars = this.querySelectorAll('.rating-stars i');
+            stars.forEach(star => {
+                star.classList.remove('bi-star-fill');
+                star.classList.add('bi-star');
+            });
+        });
+
+        // Автоматическое переключение табов из URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tab = urlParams.get('tab');
+            if (tab) {
+                const triggerEl = document.querySelector(`[data-bs-target="#${tab}"]`);
+                if (triggerEl) {
+                    const tabInstance = new bootstrap.Tab(triggerEl);
+                    tabInstance.show();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+

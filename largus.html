@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lada Largus: характеристики, слабые места, отзывы | Универсал повышенной вместимости</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --lada-red: #c00;
+            --lada-dark: #1a1a1a;
+            --lada-light: #f8f9fa;
+            --largus-orange: #fd7e14;
+        }
+        
+        .navbar-brand { font-weight: bold; color: var(--lada-red) !important; }
+        .nav-link.active { color: var(--lada-red) !important; font-weight: 600; }
+        footer { background-color: var(--lada-dark); }
+        
+        .model-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://avatars.mds.yandex.net/get-autoru-vos/216201/2a0000017b2b62ef6cf4e12aed92372d3baa/orig');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .problem-card {
+            border-left: 4px solid;
+            transition: all 0.3s;
+        }
+        
+        .problem-card.critical { border-left-color: #dc3545; }
+        .problem-card.medium { border-left-color: #ffc107; }
+        .problem-card.low { border-left-color: #28a745; }
+        
+        .problem-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .spec-icon {
+            color: var(--largus-orange);
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        .rating-stars {
+            color: #ffc107;
+        }
+        
+        .badge-severity-low { background-color: #28a745; }
+        .badge-severity-medium { background-color: #ffc107; color: #000; }
+        .badge-severity-high { background-color: #dc3545; }
+        
+        .capacity-badge {
+            background: var(--largus-orange);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 2px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .alert-largus {
+            border-left: 4px solid var(--largus-orange);
+        }
+        
+        .version-card {
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .capacity-meter {
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        
+        .capacity-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #fd7e14, #ff9966);
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+        
+        .interior-image {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .interior-image:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-car-front-fill"></i> LADA Обзор
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="modelsDropdown" role="button" data-bs-toggle="dropdown">
+                            Модели
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="granta.html">Lada Granta</a></li>
+                            <li><a class="dropdown-item" href="vesta.html">Lada Vesta</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="niva.html">Lada Niva (4x4)</a></li>
+                            <li><a class="dropdown-item" href="niva-new.html">Lada Niva (новая)</a></li>
+                            <li><a class="dropdown-item active" href="largus.html">Lada Largus</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Шапка модели -->
+    <header class="model-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent p-0">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Главная</a></li>
+                            <li class="breadcrumb-item text-white" aria-current="page">Lada Largus</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold">Lada Largus</h1>
+                    <p class="lead">Самый практичный и вместительный автомобиль в линейке Lada. Фактически Renault Logan MCV в кузове Lada.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-3">
+                        <span class="badge bg-warning fs-6">Универсал</span>
+                        <span class="badge bg-secondary fs-6">От 950 000 ₽</span>
+                        <span class="badge bg-info fs-6">Renault платформа</span>
+                        <span class="badge bg-success fs-6">До 7 мест</span>
+                    </div>
+                    <div class="rating-stars fs-4">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <span class="ms-2">4.0/5 на основе 1876 отзывов</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="https://avatars.mds.yandex.net/get-autoru-vos/216201/2a0000017b2b62ef6cf4e12aed92372d3baa/orig"
+                    class="img-fluid rounded shadow" alt="Lada Largus" style="max-height: 250px;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Навигация по странице -->
+            <nav class="mb-5">
+                <div class="nav nav-tabs" id="modelTab" role="tablist">
+                    <button class="nav-link active" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs">
+                        <i class="bi bi-list-check"></i> Характеристики
+                    </button>
+                    <button class="nav-link" id="problems-tab" data-bs-toggle="tab" data-bs-target="#problems">
+                        <i class="bi bi-exclamation-triangle"></i> Слабые места
+                    </button>
+                    <button class="nav-link" id="capacity-tab" data-bs-toggle="tab" data-bs-target="#capacity">
+                        <i class="bi bi-box-seam"></i> Вместимость
+                    </button>
+                    <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review">
+                        <i class="bi bi-search"></i> Что проверять
+                    </button>
+                    <button class="nav-link" id="opinions-tab" data-bs-toggle="tab" data-bs-target="#opinions">
+                        <i class="bi bi-chat-left-text"></i> Отзывы (89)
+                    </button>
+                </div>
+            </nav>
+
+            <div class="tab-content" id="modelTabContent">
+                <!-- Вкладка Характеристики -->
+                <div class="tab-pane fade show active" id="specs">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h3 class="mb-4">Практичный универсал на платформе Renault</h3>
+                            <p class="lead">Lada Largus — результат сотрудничества AVTOVAZ и Renault. Фактически это Renault Logan MCV, адаптированный для российского рынка. Выпускается с 2012 года.</p>
+                            
+                            <!-- Версии -->
+                            <h4 class="mt-4">Модификации Largus</h4>
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="card version-card mb-3">
+                                        <div class="card-body">
+                                            <h5>Largus (5 мест)</h5>
+                                            <p>Базовый универсал с 5 посадочными местами. Багажник 560 литров.</p>
+                                            <span class="badge bg-warning">Самый популярный</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card version-card mb-3">
+                                        <div class="card-body">
+                                            <h5>Largus Cross</h5>
+                                            <p>Версия с увеличенным клиренсом, пластиковой защитой кузова.</p>
+                                            <span class="badge bg-success">Повышенная проходимость</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card version-card mb-3">
+                                        <div class="card-body">
+                                            <h5>Largus Van (фургон)</h5>
+                                            <p>Коммерческая версия без задних сидений. Грузоподъемность до 800 кг.</p>
+                                            <span class="badge bg-secondary">Для бизнеса</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-speedometer2 spec-icon"></i>Динамика
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Разгон 0-100 км/ч:</strong> 12.5-13.5 сек</p>
+                                            <p><strong>Макс. скорость:</strong> 162 км/ч</p>
+                                            <p><strong>Грузоподъемность:</strong> 560-800 кг</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-fuel-pump spec-icon"></i>Расход топлива
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Город:</strong> 10.1 л/100км</p>
+                                            <p><strong>Трасса:</strong> 7.0 л/100км</p>
+                                            <p><strong>Смешанный:</strong> 8.8 л/100км</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-header bg-light">
+                                            <i class="bi bi-rulers spec-icon"></i>Габариты
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Длина/Ширина:</strong> 4470/1750 мм</p>
+                                            <p><strong>Колесная база:</strong> 2905 мм</p>
+                                            <p><strong>Багажник:</strong> 560-2350 л</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4>Двигатели и трансмиссии</h4>
+                            <div class="table-responsive mb-4">
+                                <table class="table table-striped comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Параметр</th>
+                                            <th>1.6 л 8V 87 л.с.</th>
+                                            <th>1.6 л 16V 106 л.с.</th>
+                                            <th>1.6 л 16V 113 л.с.</th>
+                                            <th>1.6 л CNG 100 л.с.</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Марка двигателя</strong></td>
+                                            <td>K7M (Renault)</td>
+                                            <td>K4M (Renault)</td>
+                                            <td>H4M (Renault)</td>
+                                            <td>K4M (газ)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Крутящий момент</strong></td>
+                                            <td>134 Н·м</td>
+                                            <td>148 Н·м</td>
+                                            <td>153 Н·м</td>
+                                            <td>135 Н·м</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Коробки передач</strong></td>
+                                            <td>МКПП-5</td>
+                                            <td>МКПП-5</td>
+                                            <td>МКПП-5, АКПП-4</td>
+                                            <td>МКПП-5</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Разгон 0-100</strong></td>
+                                            <td>13.5 с</td>
+                                            <td>12.5 с</td>
+                                            <td>12.0 с (МКПП)</td>
+                                            <td>13.0 с</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Расход (смешанный)</strong></td>
+                                            <td>9.2 л/100км</td>
+                                            <td>8.8 л/100км</td>
+                                            <td>8.6 л/100км</td>
+                                            <td>7.8 м³/100км (газ)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4>Основные комплектации</h4>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-warning">
+                                            <h5 class="mb-0">Standard</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Кондиционер, 2 подушки безопасности, ABS, центральный замок, аудиоподготовка</p>
+                                            <p class="fw-bold text-danger">От 950 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-warning">
+                                            <h5 class="mb-0">Comfort</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Климат-контроль, передние электростеклоподъемники, легкосплавные диски, бортовой компьютер</p>
+                                            <p class="fw-bold text-danger">От 1 050 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-warning">
+                                            <h5 class="mb-0">Luxe</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Кожаный руль, подогрев сидений, задние электростеклоподъемники, датчики парковки</p>
+                                            <p class="fw-bold text-danger">От 1 150 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card sticky-top" style="top: 20px;">
+                                <div class="card-header bg-warning">
+                                    <h5 class="mb-0">Краткий вердикт</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6>👍 Основные достоинства:</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Огромный багажник (560-2350 л)</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Надежные двигатели Renault</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Просторный салон для 7 пассажиров</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Низкая стоимость обслуживания</li>
+                                        <li><i class="bi bi-check-circle-fill text-success"></i> Доступные запчасти</li>
+                                    </ul>
+                                    
+                                    <h6 class="mt-3">👎 Критические недостатки:</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Быстрый износ сцепления</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Вибрации на холостых</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Проседание задней подвески</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Шумный салон на трассе</li>
+                                        <li><i class="bi bi-x-circle-fill text-danger"></i> Слабый обогрев задней части</li>
+                                    </ul>
+                                    
+                                    <div class="alert alert-largus mt-3">
+                                        <i class="bi bi-lightbulb"></i>
+                                        <strong>Рекомендация:</strong> Идеален для большой семьи, дачников, малого бизнеса.
+                                    </div>
+                                    
+                                    <div class="alert alert-warning mt-3">
+                                        <i class="bi bi-exclamation-triangle"></i>
+                                        <strong>Важно:</strong> При загрузке более 400 кг обязательна установка усиленных пружин.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card mt-4">
+                                <div class="card-header bg-info text-white">
+                                    <h5 class="mb-0">Сравнение с конкурентами</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>Lada Largus vs Renault Logan MCV</strong> - одинаковая техника, разная цена</p>
+                                    <p><strong>Lada Largus vs Volkswagen Caddy</strong> - проигрывает в качестве, выигрывает в цене</p>
+                                    <p><strong>Lada Largus vs УАЗ Профи</strong> - комфортнее, но менее проходимый</p>
+                                    <p><strong>Lada Largus vs Dacia Logan MCV</strong> - фактически один автомобиль</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Слабые места -->
+                <div class="tab-pane fade" id="problems">
+                    <h3 class="mb-4">Слабые места Lada Largus: особенности эксплуатации</h3>
+                    
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle"></i> Многие проблемы Largus связаны с его основным предназначением - перевозкой грузов и пассажиров.
+                    </div>
+
+                    <div class="row">
+                        <!-- Проблема 1 - Критичная -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card critical h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Сцепление</h5>
+                                        <span class="badge badge-severity-high">Критично</span>
+                                    </div>
+                                    <p class="card-text">Самая частая проблема Largus. Сцепление изнашивается очень быстро, особенно при постоянной загрузке автомобиля.</p>
+                                    <p><strong>Симптомы:</strong> пробуксовка при резком старте, запах гари, рывки при переключении передач.</p>
+                                    <p><strong>Причина:</strong> тяжелый автомобиль (1300+ кг) + слабое сцепление от Logan.</p>
+                                    <p><strong>Решение:</strong> установка усиленного сцепления, аккуратная эксплуатация.</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Пробег до замены: 40-80 тыс. км при нагрузках</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 2 - Средняя -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card medium h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Задняя подвеска</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">Пружины задней подвески проседают под нагрузкой, особенно на автомобилях, постоянно перевозящих грузы.</p>
+                                    <p><strong>Симптомы:</strong> "приседание" задней части при загрузке, уменьшение клиренса.</p>
+                                    <p><strong>Решение:</strong> установка усиленных пружин, регулярная проверка состояния.</p>
+                                    <p><strong>Стоимость ремонта:</strong> 8-15 тыс. рублей (с работой)</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Проявляется при постоянной нагрузке от 300 кг</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 3 - Средняя -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card medium h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Вибрации на холостых</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">Характерная проблема для двигателей Renault на Largus. Особенно заметна на 8-клапанном моторе.</p>
+                                    <p><strong>Симптомы:</strong> дрожание руля и кузова на холостом ходу, плавающие обороты.</p>
+                                    <p><strong>Причина:</strong> неправильная работа РХХ, загрязнение дроссельной заслонки.</p>
+                                    <p><strong>Решение:</strong> чистка дросселя, замена РХХ, прошивка ЭБУ.</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Встречается у 60% автомобилей с мотором K7M</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 4 - Низкая -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card low h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Электрические проблемы</h5>
+                                        <span class="badge badge-severity-low">Низко</span>
+                                    </div>
+                                    <p class="card-text">Ненадежные разъемы проводки, проблемы с борткомпьютером, отказы электростеклоподъемников.</p>
+                                    <p><strong>Симптомы:</strong> ошибки на панели приборов, неработающие электроприводы.</p>
+                                    <p><strong>Решение:</strong> чистка контактов, замена разъемов, перепрошивка борткомпьютера.</p>
+                                    <p><strong>Стоимость ремонта:</strong> 3-8 тыс. рублей</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Чаще встречается на ранних выпусках (до 2015)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 5 - Низкая -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card low h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Кузовные проблемы</h5>
+                                        <span class="badge badge-severity-low">Низко</span>
+                                    </div>
+                                    <p class="card-text">Коррозия в местах крепления задней двери, плохое качество ЛКП, люфты в дверных петлях.</p>
+                                    <p><strong>Симптомы:</strong> ржавчина на креплениях, сколы краски, скрипы при открытии дверей.</p>
+                                    <p><strong>Решение:</strong> антикоррозийная обработка, замена петель, локальный ремонт ЛКП.</p>
+                                    <p><strong>Стоимость ремонта:</strong> 5-20 тыс. рублей</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Проявляется через 3-5 лет эксплуатации</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Проблема 6 - Средняя -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card problem-card medium h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title">Шумность салона</h5>
+                                        <span class="badge badge-severity-medium">Средне</span>
+                                    </div>
+                                    <p class="card-text">Плохая шумоизоляция, особенно на трассе. Сильный шум от колесных арок и днища.</p>
+                                    <p><strong>Симптомы:</strong> гул на скорости выше 80 км/ч, шум от встречных фур.</p>
+                                    <p><strong>Решение:</strong> дополнительная шумоизоляция, установка "грибков" на стойки.</p>
+                                    <p><strong>Стоимость:</strong> 15-30 тыс. рублей (профессиональная шумоизоляция)</p>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Проблема всех бюджетных универсалов</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success mt-4">
+                        <h5><i class="bi bi-check-circle"></i> Что работает надежно</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><strong>Двигатели Renault:</strong> K4M, K7M - проверенные временем</li>
+                                    <li><strong>Механическая КПП:</strong> надежная 5-ступенчатая коробка</li>
+                                    <li><strong>Тормозная система:</strong> эффективные тормоза даже при нагрузке</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><strong>Передняя подвеска:</strong> McPherson - простая и ремонтопригодная</li>
+                                    <li><strong>Кузов:</strong> хорошая антикоррозийная обработка (лучше, чем у ВАЗов)</li>
+                                    <li><strong>Электрооборудование:</strong> в целом надежное (кроме мелких проблем)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-header bg-warning">
+                            <h5 class="mb-0">Рекомендации по эксплуатации для продления срока службы</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Для сцепления:</h6>
+                                    <ul>
+                                        <li>Не стартовать с высоких оборотов</li>
+                                        <li>Не держать ногу на педали сцепления</li>
+                                        <li>При загрузке более 300 кг - трогаться плавно</li>
+                                        <li>Менять сцепление в сборе (диск+корзина+выжимной)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Для подвески:</h6>
+                                    <ul>
+                                        <li>При постоянной загрузке - усиленные пружины</li>
+                                        <li>Регулярно проверять сайлентблоки</li>
+                                        <li>Следить за состоянием амортизаторов</li>
+                                        <li>Не превышать грузоподъемность (560 кг для 5-местной версии)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Вместимость -->
+                <div class="tab-pane fade" id="capacity">
+                    <h3 class="mb-4">Вместимость и практичность Lada Largus</h3>
+                    
+                    <div class="alert alert-warning">
+                        <h5><i class="bi bi-box-seam"></i> Главное преимущество Largus - огромное пространство</h5>
+                        <p>Largus создан для тех, кому важна практичность и возможность перевезти много груза или пассажиров.</p>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-warning text-white">
+                                    <h5 class="mb-0">Объем багажника</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>В 5-местной версии:</strong></p>
+                                    <div class="capacity-meter">
+                                        <div class="capacity-fill" style="width: 100%"></div>
+                                    </div>
+                                    <p>560 литров (до полки) / 2350 литров (со сложенными сиденьями)</p>
+                                    
+                                    <p class="mt-3"><strong>В 7-местной версии:</strong></p>
+                                    <div class="capacity-meter">
+                                        <div class="capacity-fill" style="width: 75%"></div>
+                                    </div>
+                                    <p>135 литров (все сиденья) / 2350 литров (сиденья сложены)</p>
+                                    
+                                    <div class="alert alert-info mt-3">
+                                        <i class="bi bi-info-circle"></i> Для сравнения: у Vesta SW - 480 л, у Renault Duster - 475 л.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-warning text-white">
+                                    <h5 class="mb-0">Габариты грузового отсека</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>Длина:</strong> 180 см (до спинок передних сидений)</p>
+                                    <p><strong>Ширина:</strong> 150 см (по колесным аркам)</p>
+                                    <p><strong>Высота:</strong> 90 см (до потолка)</p>
+                                    <p><strong>Площадь пола:</strong> 2.7 м²</p>
+                                    <p><strong>Ширина проема багажника:</strong> 110 см</p>
+                                    <p><strong>Высота проема:</strong> 85 см</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-warning text-white">
+                                    <h5 class="mb-0">Что можно перевезти</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6>Типичные грузы для Largus:</h6>
+                                    <ul>
+                                        <li>Холодильник (до 200 литров) - без проблем</li>
+                                        <li>Стиральная машина - помещается</li>
+                                        <li>Велосипед (в сложенном виде) - до 3 штук</li>
+                                        <li>Строительные материалы (гипсокартон, доски до 2.5 м)</li>
+                                        <li>Дачный урожай (20 мешков картошки)</li>
+                                    </ul>
+                                    
+                                    <h6 class="mt-3">Для бизнеса:</h6>
+                                    <ul>
+                                        <li>Курьерская доставка (до 100 небольших посылок)</li>
+                                        <li>Цветочный бизнес (до 50 букетов в вазах)</li>
+                                        <li>Мобильная торговля (хот-доги, кофе)</li>
+                                        <li>Ремонтные бригады (инструмент + материалы)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-warning text-white">
+                                    <h5 class="mb-0">Практические примеры</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img src="https://avatars.mds.yandex.net/get-verba/216201/2a0000017b2b62ef6cf4e12aed92372d3baa/orig" 
+                                                 class="img-fluid interior-image mb-2" alt="Largus с грузом">
+                                            <small>Полная загрузка багажника</small>
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="https://avatars.mds.yandex.net/get-verba/216201/2a0000017b2b62ef6cf4e12aed92372d3baa/orig" 
+                                                 class="img-fluid interior-image mb-2" alt="Largus с пассажирами">
+                                            <small>7-местная версия</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="mb-3">Сравнение вместимости с конкурентами</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th>Модель</th>
+                                    <th>Багажник (л)</th>
+                                    <th>Сложенные сиденья (л)</th>
+                                    <th>Грузоподъемность</th>
+                                    <th>Цена от</th>
+                                    <th>Плюсы</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-warning">
+                                    <td><strong>Lada Largus</strong></td>
+                                    <td>560</td>
+                                    <td>2350</td>
+                                    <td>560-800 кг</td>
+                                    <td>950 000 ₽</td>
+                                    <td>Лучшее соотношение цена/вместимость</td>
+                                </tr>
+                                <tr>
+                                    <td>Renault Logan MCV</td>
+                                    <td>510</td>
+                                    <td>2100</td>
+                                    <td>550 кг</td>
+                                    <td>1 100 000 ₽</td>
+                                    <td>Та же платформа, дороже</td>
+                                </tr>
+                                <tr>
+                                    <td>Volkswagen Caddy</td>
+                                    <td>530</td>
+                                    <td>3200</td>
+                                    <td>700 кг</td>
+                                    <td>1 800 000 ₽</td>
+                                    <td>Качество, но цена в 2 раза выше</td>
+                                </tr>
+                                <tr>
+                                    <td>УАЗ Профи</td>
+                                    <td>4500</td>
+                                    <td>4500</td>
+                                    <td>900 кг</td>
+                                    <td>1 300 000 ₽</td>
+                                    <td>Грузоподъемность, проходимость</td>
+                                </tr>
+                                <tr>
+                                    <td>Dacia Logan MCV</td>
+                                    <td>510</td>
+                                    <td>2100</td>
+                                    <td>550 кг</td>
+                                    <td>850 000 ₽</td>
+                                    <td>Дешевле, но не продается в РФ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert alert-info mt-4">
+                        <h5><i class="bi bi-lightbulb"></i> Кому подходит Lada Largus</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Идеально для:</strong></p>
+                                <ul>
+                                    <li>Больших семей (5-7 человек)</li>
+                                    <li>Дачников и садоводов</li>
+                                    <li>Малого бизнеса (курьеры, сервис)</li>
+                                    <li>Ремонтных бригад</li>
+                                    <li>Путешественников с большим багажом</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Не подходит для:</strong></p>
+                                <ul>
+                                    <li>Любителей динамичной езды</li>
+                                    <li>Ценителей тишины и комфорта</li>
+                                    <li>Городских ежедневных поездок в одиночку</li>
+                                    <li>Поклонников премиальных марок</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Что проверять -->
+                <div class="tab-pane fade" id="review">
+                    <h3 class="mb-4">Чек-лист при покупке Lada Largus (новая и б/у)</h3>
+                    
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle"></i> При покупке Largus основное внимание - на состояние сцепления, подвески и кузова!
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-warning text-white">
+                                    <h5 class="mb-0"><i class="bi bi-clutch"></i> Проверка сцепления</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li><strong>Старт в горку:</strong> включите 2-3 передачу и попытайтесь тронуться</li>
+                                        <li><strong>Резкий разгон:</strong> разгонитесь до 60 км/ч на 3 передаче, резко нажмите газ</li>
+                                        <li><strong>Запах:</strong> после теста проверьте, нет ли запаха гари</li>
+                                        <li><strong>Педаль:</strong> ход педали не должен быть слишком легким или тяжелым</li>
+                                        <li><strong>Точка схватывания:</strong> должна быть в середине хода педали</li>
+                                    </ol>
+                                    <div class="alert alert-danger mt-3">
+                                        <i class="bi bi-exclamation-octagon"></i> Если сцепление буксует - замена обойдется в 25-40 тыс. рублей!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-warning text-white">
+                                    <h5 class="mb-0"><i class="bi bi-car-front"></i> Проверка кузова</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Осмотрите крепления задней двери на предмет коррозии</li>
+                                        <li>Проверьте пороги и арки колес</li>
+                                        <li>Осмотрите днище (особенно если автомобиль перевозил грузы)</li>
+                                        <li>Проверьте равномерность зазоров кузовных панелей</li>
+                                        <li>Осмотрите лакокрасочное покрытие на сколы и царапины</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-warning text-white">
+                                    <h5 class="mb-0"><i class="bi bi-speedometer"></i> Проверка двигателя и подвески</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><strong>Холостые обороты:</strong> проверьте наличие вибраций</li>
+                                        <li><strong>Задняя подвеска:</strong> измерьте клиренс сзади (должен быть 17-18 см)</li>
+                                        <li><strong>Тест на нагрузку:</strong> посадите 3-4 человека в салон, проверьте проседание</li>
+                                        <li><strong>Разгон:</strong> проверьте динамику (разгон до 100 км/ч за 12-13 сек)</li>
+                                        <li><strong>Масло:</strong> проверьте уровень и цвет масла в двигателе и КПП</li>
+                                    </ul>
+                                    <div class="alert alert-info mt-3">
+                                        <i class="bi bi-info-circle"></i> Вибрации на холостых - характерная проблема, но решаемая
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header bg-warning text-white">
+                                    <h5 class="mb-0"><i class="bi bi-plug"></i> Проверка электрооборудования</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Включите все электроприборы одновременно</li>
+                                        <li>Проверьте работу всех электростеклоподъемников</li>
+                                        <li>Протестируйте борткомпьютер (если есть)</li>
+                                        <li>Проверьте работу кондиционера/климат-контроля</li>
+                                        <li>Убедитесь в отсутствии ошибок на приборной панели</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-warning text-white">
+                                    <h5 class="mb-0"><i class="bi bi-briefcase"></i> Проверка грузового отсека</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Осмотрите пол багажника на предмет повреждений</li>
+                                        <li>Проверьте механизм складывания сидений</li>
+                                        <li>Осмотрите обивку салона на разрывы и потертости</li>
+                                        <li>Проверьте работу задних подголовников (если есть)</li>
+                                        <li>Убедитесь в наличии запаски и инструмента</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card mb-4">
+                                <div class="card-header bg-warning text-white">
+                                    <h5 class="mb-0"><i class="bi bi-file-text"></i> Документы и история</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Проверьте VIN-код в документах и на кузове</li>
+                                        <li>Уточните, использовался ли автомобиль для бизнеса</li>
+                                        <li>Проверьте сервисную книжку (регулярность ТО)</li>
+                                        <li>Уточните пробег по диагностике ЭБУ</li>
+                                        <li>Проверьте автомобиль по базам на ДТП</li>
+                                    </ul>
+                                    <div class="alert alert-danger mt-3">
+                                        <i class="bi bi-exclamation-octagon"></i> Бывший в коммерческой эксплуатации Largus - не лучший выбор!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success">
+                        <h5><i class="bi bi-check-circle"></i> Что должно насторожить при покупке б/у Largus</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Следы интенсивной коммерческой эксплуатации</li>
+                                    <li>Сильный износ водительского сиденья</li>
+                                    <li>Повреждения пола багажника</li>
+                                    <li>Неестественно низкий пробег для возраста</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Признаки перегруза (деформированные пружины)</li>
+                                    <li>Множественные царапины в багажнике</li>
+                                    <li>Запах табака или животных в салоне</li>
+                                    <li>Следы самостоятельного ремонта электрики</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка Отзывы -->
+                <div class="tab-pane fade" id="opinions">
+                    <h3 class="mb-4">Отзывы владельцев Lada Largus</h3>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Статистика по отзывам</h5>
+                                    <p><strong>Общая оценка:</strong> 4.0/5 (1876 отзывов)</p>
+                                    <p><strong>Вместимость:</strong> 4.8/5</p>
+                                    <p><strong>Надежность:</strong> 3.7/5</p>
+                                    <p><strong>Комфорт:</strong> 3.2/5</p>
+                                    <p><strong>Экономичность:</strong> 3.5/5</p>
+                                    <p><strong>Рекомендуют:</strong> 72% владельцев</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Основные цели покупки</h5>
+                                    <p><strong>Для семьи (5+ человек):</strong> 45% владельцев</p>
+                                    <p><strong>Для дачи/огорода:</strong> 32% владельцев</p>
+                                    <p><strong>Для малого бизнеса:</strong> 18% владельцев</p>
+                                    <p><strong>Вторая машина в семье:</strong> 5% владельцев</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Форма добавления отзыва -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">Добавить ваш отзыв о Lada Largus</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="reviewForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Имя</label>
+                                        <input type="text" class="form-control" placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Год выпуска</label>
+                                        <select class="form-select" required>
+                                            <option value="">Выберите год</option>
+                                            <option>2012-2015 (первое поколение)</option>
+                                            <option>2016-2018 (рестайлинг)</option>
+                                            <option>2019-2021 (второе поколение)</option>
+                                            <option>2022-н.в. (текущая версия)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Пробег</label>
+                                        <input type="number" class="form-control" placeholder="тыс. км" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Версия</label>
+                                        <select class="form-select">
+                                            <option>5-местный универсал</option>
+                                            <option>7-местный универсал</option>
+                                            <option>Largus Cross</option>
+                                            <option>Фургон (Van)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Цель использования</label>
+                                        <select class="form-select">
+                                            <option>Семейный автомобиль</option>
+                                            <option>Для дачи/огорода</option>
+                                            <option>Для бизнеса</option>
+                                            <option>Путешествия</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Ваш отзыв</label>
+                                    <textarea class="form-control" rows="4" placeholder="Опишите ваш опыт владения, как используете вместимость, проблемы..." required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Оценка</label>
+                                    <div class="rating-stars fs-3">
+                                        <i class="bi bi-star" data-rating="1"></i>
+                                        <i class="bi bi-star" data-rating="2"></i>
+                                        <i class="bi bi-star" data-rating="3"></i>
+                                        <i class="bi bi-star" data-rating="4"></i>
+                                        <i class="bi bi-star" data-rating="5"></i>
+                                    </div>
+                                    <input type="hidden" id="ratingValue" value="0">
+                                </div>
+                                <button type="submit" class="btn btn-warning">Отправить отзыв</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Список отзывов -->
+                    <h5 class="mb-3">Реальные отзывы владельцев</h5>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Сергей, 2018 г.в., пробег 85 000 км</h6>
+                                    <small class="text-muted">7-местный, 1.6 106 л.с., для семьи</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Купил, когда родился третий ребенок. Семья из 5 человек + бабушка = все помещаются! Багажник огромный - коляска, сумки, игрушки. За 5 лет: менял сцепление на 60 тыс. км (дорого, 35 тыс.), задние пружины просели - поставил усиленные. Вибрации были, почистили дроссель - прошли. Расход 9.5 литров по городу. Для семьи - лучший выбор за эти деньги.</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 2 недели назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Анна, 2020 г.в., пробег 45 000 км</h6>
+                                    <small class="text-muted">5-местный, 1.6 87 л.с., для дачи</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Брала для дачи (30 км от города, 5 км грунтовки). Загружаю мешками с картошкой, саженцами, стройматериалами. Подвеска просела через год - поставила усиленные пружины. Сцепление пока держится (езжу аккуратно). Зимой плохо греет задняя часть салона. Но багажник - восторг! За один раз перевожу весь урожай. Для дачи - идеально.</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 1 месяц назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Игорь, 2016 г.в., пробег 150 000 км</h6>
+                                    <small class="text-muted">Фургон, 1.6 87 л.с., курьерская служба</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Использовал для курьерской доставки. За 4 года: 3 сцепления (каждые 50 тыс.), задние пружины 2 раза, амортизаторы все поменял. Электрика глючила постоянно. Но! Грузоподъемность отличная - возил до 600 кг. Расход 10-11 литров в городе. На 150 тыс. капиталка двигателя. Для бизнеса выгодно, но готовьтесь к ремонтам. Сейчас продаю - убитый совсем.</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 2 месяца назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="card-subtitle mb-1">Марина, 2022 г.в., пробег 25 000 км</h6>
+                                    <small class="text-muted">Largus Cross, 1.6 113 л.с., путешествия</small>
+                                </div>
+                                <div class="rating-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="card-text">Брали с мужем для путешествий по России. Cross версия - клиренс 205 мм, защита кузова. Проехали Карелию, Крым, Алтай. Везде проехали, ни разу не застряли. В салоне - палатка, спальники, газовая плита, велосипед. Места хватает на все! Вибраций нет, сцепление нормальное. Шумоизоляция слабая, но зато цена в 2 раза ниже аналогов. Очень довольны!</p>
+                            <div class="mt-2">
+                                <small class="text-muted">Опубликовано 3 недели назад</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-outline-warning me-2">Показать еще отзывы</button>
+                        <a href="forum.html?model=largus" class="btn btn-link">Обсудить на форуме</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Блок сравнения версий -->
+            <div class="card mt-5">
+                <div class="card-header bg-warning">
+                    <h5 class="mb-0"><i class="bi bi-bar-chart"></i> Какая версия Largus вам подходит?</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Критерий</th>
+                                    <th>5-местный универсал</th>
+                                    <th>7-местный универсал</th>
+                                    <th>Largus Cross</th>
+                                    <th>Фургон (Van)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Цена от</strong></td>
+                                    <td>950 000 ₽</td>
+                                    <td>1 050 000 ₽</td>
+                                    <td>1 100 000 ₽</td>
+                                    <td>900 000 ₽</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Багажник (л)</strong></td>
+                                    <td>560 / 2350</td>
+                                    <td>135 / 2350</td>
+                                    <td>560 / 2350</td>
+                                    <td>2650 (постоянно)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Клиренс</strong></td>
+                                    <td>175 мм</td>
+                                    <td>175 мм</td>
+                                    <td>205 мм</td>
+                                    <td>175 мм</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Грузоподъемность</strong></td>
+                                    <td>560 кг</td>
+                                    <td>560 кг</td>
+                                    <td>560 кг</td>
+                                    <td>800 кг</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Кому рекомендован</strong></td>
+                                    <td>Семья 4-5 чел, дачники</td>
+                                    <td>Большая семья (6-7 чел)</td>
+                                    <td>Путешественники, грунтовые дороги</td>
+                                    <td>Малый бизнес, грузоперевозки</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert alert-info mt-3">
+                        <i class="bi bi-lightbulb"></i> <strong>Совет:</strong> Для семей до 5 человек лучше брать 5-местную версию - больше багажника. Для 6-7 человек - только 7-местная.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>LADA Обзор</h5>
+                    <p>Объективные обзоры и реальные отзывы о автомобилях Lada.</p>
+                    <div class="mt-3">
+                        <small class="text-white-50">© 2025 LADA Обзор. Информационный проект.</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Другие модели</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="granta.html" class="text-white-50 text-decoration-none">Lada Granta</a></li>
+                        <li><a href="vesta.html" class="text-white-50 text-decoration-none">Lada Vesta</a></li>
+                        <li><a href="niva.html" class="text-white-50 text-decoration-none">Lada Niva (4x4)</a></li>
+                        <li><a href="niva-new.html" class="text-white-50 text-decoration-none">Lada Niva (новая)</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Рейтинг звездочки
+        document.querySelectorAll('.rating-stars i').forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                const stars = this.parentElement.querySelectorAll('i');
+                
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.classList.remove('bi-star');
+                        s.classList.add('bi-star-fill');
+                    } else {
+                        s.classList.remove('bi-star-fill');
+                        s.classList.add('bi-star');
+                    }
+                });
+                
+                document.getElementById('ratingValue').value = rating;
+            });
+        });
+
+        // Обработка формы отзыва
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за ваш отзыв о Lada Largus! После модерации он появится на сайте.');
+            this.reset();
+            
+            // Сброс звезд
+            const stars = this.querySelectorAll('.rating-stars i');
+            stars.forEach(star => {
+                star.classList.remove('bi-star-fill');
+                star.classList.add('bi-star');
+            });
+        });
+
+        // Анимация заполнения capacity-meter
+        document.addEventListener('DOMContentLoaded', function() {
+            const capacityFills = document.querySelectorAll('.capacity-fill');
+            capacityFills.forEach(fill => {
+                const width = fill.style.width;
+                fill.style.width = '0%';
+                setTimeout(() => {
+                    fill.style.width = width;
+                }, 500);
+            });
+            
+            // Автоматическое переключение табов из URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const tab = urlParams.get('tab');
+            if (tab) {
+                const triggerEl = document.querySelector(`[data-bs-target="#${tab}"]`);
+                if (triggerEl) {
+                    const tabInstance = new bootstrap.Tab(triggerEl);
+                    tabInstance.show();
+                }
+            }
+            
+            // Подсветка активной модели в меню
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

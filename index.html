@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- 
+    ПРОДУКТ: Сайт дилерского центра LADA
+    АВТОР: [Алексанян Сергей Арманович]
+    ДАТА: [14.09.2025]
+    
+    Описание: Сайт создан для учебного проекта. 
+    Использованы: HTML5, CSS3, Bootstrap 5, JavaScript.
+-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LADA-ДИЛЛЕР: Обзоры и слабые места | Granta, Vesta, Нива, Ларгус</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Иконки Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --lada-red: #c00;
+            --lada-dark: #1a1a1a;
+            --lada-light: #f8f9fa;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--lada-red) !important;
+        }
+        
+        .nav-link.active {
+            color: var(--lada-red) !important;
+            font-weight: 600;
+        }
+        
+        .card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .model-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--lada-red);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .feature-icon {
+            color: var(--lada-red);
+            margin-right: 8px;
+        }
+        
+        footer {
+            background-color: var(--lada-dark);
+        }
+        
+        .model-card-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .rating-badge {
+            background: #ffc107;
+            color: #000;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-car-front-fill"></i> LADA-ДИЛЕР
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="modelsDropdown" role="button" data-bs-toggle="dropdown">
+                            Модели
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="granta.html">Lada Granta</a></li>
+                            <li><a class="dropdown-item" href="vesta.html">Lada Vesta</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="niva.html">Lada Niva (4x4)</a></li>
+                            <li><a class="dropdown-item" href="niva-new.html">Lada Niva (travel)</a></li>
+                            <li><a class="dropdown-item" href="largus.html">Lada Largus</a></li>
+                        </ul>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <section class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-3">Реальные обзоры Lada</h1>
+                    <p class="lead mb-4">Подробные характеристики, сравнения и <span class="text-warning">слабые места</span> популярных моделей: Granta, Vesta, Нива, Ларгус. Объективная информация от владельцев и экспертов.</p>
+                    <a href="#models" class="btn btn-danger btn-lg">Выбрать модель</a>
+                    
+                </div>
+                <div class="col-lg-6">
+                    <img src="" class="...">
+                         
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с моделями -->
+    <section id="models" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Выберите модель для детального обзора</h2>
+            
+            <div class="row g-4">
+                <!-- Granta Card -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="position-relative">
+                            <img src="" class="...">
+                                 
+                            <span class="model-badge">Бюджетный седан</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lada Granta</h5>
+                            <p class="card-text">Самый доступный новый автомобиль в России. Идеален как первый автомобиль.</p>
+                            <div class="mb-3">
+                                <small class="text-muted">
+                                    <i class="bi bi-fuel-pump"></i> Расход: 7.6 л/100км<br>
+                                    <i class="bi bi-gear"></i> Двигатель: 1.6 л (90-106 л.с.)
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="rating-badge">3.8/5</span>
+                                    <small class="text-muted ms-2">Надежность</small>
+                                </div>
+                                <a href="granta.html" class="btn btn-outline-danger btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vesta Card -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="position-relative">
+                            <img src="" class="...">
+                                 
+                            <span class="model-badge" style="background: #0d6efd;">Флагман</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lada Vesta</h5>
+                            <p class="card-text">Самый современный и технологичный седан/универсал от AVTOVAZ.</p>
+                            <div class="mb-3">
+                                <small class="text-muted">
+                                    <i class="bi bi-fuel-pump"></i> Расход: 8.2 л/100км<br>
+                                    <i class="bi bi-gear"></i> Двигатель: 1.6-1.8 л (106-122 л.с.)
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="rating-badge">4.1/5</span>
+                                    <small class="text-muted ms-2">Комфорт</small>
+                                </div>
+                                <a href="vesta.html" class="btn btn-outline-danger btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Niva Legend Card -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="position-relative">
+                            <img src="" class="...">                                
+                            <span class="model-badge" style="background: #28a745;">Легенда</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lada Niva (4x4)</h5>
+                            <p class="card-text">Уникальный доступный рамный внедорожник с блокировкой дифференциала.</p>
+                            <div class="mb-3">
+                                <small class="text-muted">
+                                    <i class="bi bi-fuel-pump"></i> Расход: 12.5 л/100км<br>
+                                    <i class="bi bi-gear"></i> Двигатель: 1.7 л (83 л.с.)
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="rating-badge">4.3/5</span>
+                                    <small class="text-muted ms-2">Проходимость</small>
+                                </div>
+                                <a href="niva.html" class="btn btn-outline-danger btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Niva Card -->
+                <div class="col-md-6 mt-4">
+                    <div class="card h-100">
+                        <div class="position-relative">
+                            <img src="" class="...">                                
+                            <span class="model-badge" style="background: #6f42c1;">SUV</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lada Niva (travel)</h5>
+                            <p class="card-text">Современный городской внедорожник с комфортом и полным приводом.</p>
+                            <div class="mb-3">
+                                <small class="text-muted">
+                                    <i class="bi bi-fuel-pump"></i> Расход: 10.2 л/100км<br>
+                                    <i class="bi bi-gear"></i> Двигатель: 1.8 л (122 л.с.)
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="rating-badge">3.5/5</span>
+                                    <small class="text-muted ms-2">Городской комфорт</small>
+                                </div>
+                                <a href="niva-new.html" class="btn btn-outline-danger btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Largus Card -->
+                <div class="col-md-6 mt-4">
+                    <div class="card h-100">
+                        <div class="position-relative">
+                            <img src="" class="...">                                
+                            <span class="model-badge" style="background: #fd7e14;">Универсал</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lada Largus</h5>
+                            <p class="card-text">Самый практичный и вместительный автомобиль в линейке Lada.</p>
+                            <div class="mb-3">
+                                <small class="text-muted">
+                                    <i class="bi bi-fuel-pump"></i> Расход: 8.8 л/100км<br>
+                                    <i class="bi bi-gear"></i> Двигатель: 1.6 л (87-106 л.с.)
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="rating-badge">4.0/5</span>
+                                    <small class="text-muted ms-2">Вместимость</small>
+                                </div>
+                                <a href="largus.html" class="btn btn-outline-danger btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Купить в нашем автосалоне</h2>
+            <p class="lead">Официальный дилер LADA с 2010 года</p>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <h3 class="text-danger">5 лет</h3>
+                    <p>Официальная гарантия</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-danger">0%</h3>
+                    <p>Первый взнос</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-danger">24 ч</h3>
+                    <p>Тест-драйв</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция сравнения -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Сравнение моделей</h2>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Характеристика</th>
+                            <th>Granta</th>
+                            <th>Vesta</th>
+                            <th>Niva (4x4)</th>
+                            <th>Niva (travel)</th>
+                            <th>Largus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Цена от (руб.)</strong></td>
+                            <td>650 000</td>
+                            <td>1 200 000</td>
+                            <td>800 000</td>
+                            <td>1 400 000</td>
+                            <td>950 000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Расход (л/100км)</strong></td>
+                            <td>7.6</td>
+                            <td>8.2</td>
+                            <td>12.5</td>
+                            <td>10.2</td>
+                            <td>8.8</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Мощность (л.с.)</strong></td>
+                            <td>90-106</td>
+                            <td>106-122</td>
+                            <td>83</td>
+                            <td>122</td>
+                            <td>87-106</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Багажник (л)</strong></td>
+                            <td>480</td>
+                            <td>480</td>
+                            <td>320</td>
+                            <td>320</td>
+                            <td>560</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Привод</strong></td>
+                            <td>Передний</td>
+                            <td>Передний</td>
+                            <td>Полный (4x4)</td>
+                            <td>Полный (подкл.)</td>
+                            <td>Передний</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </section>
+    <div class="container py-5">
+        <h3>Запись на тест-драйв</h3>
+        <p>Телефон: 8-800-XXX-XX-XX</p>
+    </div>
+
+    <!-- Футер -->
+    <footer class="text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>LADA Дилер</h5>
+                    <p>Объективные обзоры и реальные отзывы о автомобилях Lada. Помогаем с выбором и обслуживанием.</p>
+                </div>
+                <div class="col-md-4">
+                   
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Главная</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    
+                    <div class="mt-3">
+                        <small class="text-white-50">© 2025 LADA Обзор. Информационный проект.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Простой скрипт для переключения табов
+        document.addEventListener('DOMContentLoaded', function() {
+            // Выделяем активную ссылку в навигации
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Слушатель для кнопки поиска
+            const searchForm = document.querySelector('form.d-flex');
+            searchForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const searchTerm = this.querySelector('input').value.toLowerCase();
+                if (searchTerm.includes('грант')) {
+                    window.location.href = 'granta.html';
+                } else if (searchTerm.includes('вест')) {
+                    window.location.href = 'vesta.html';
+                } else if (searchTerm.includes('нив')) {
+                    window.location.href = 'niva.html';
+                } else if (searchTerm.includes('ларг')) {
+                    window.location.href = 'largus.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
